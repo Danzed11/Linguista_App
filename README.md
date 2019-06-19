@@ -1,3 +1,12 @@
+# Linguista
+Improve your foreign language skills by reading your favourite books! Linguista is built using React and Express. 
+
+
+## User Stories
+- "As a user, I want to improve my french comprehension skills."
+- "I want to upload my own Epub docs and read my book in a reader. If I don't understand a word, I want to be able to click on it and see the translation pop-up while also adding that word into a library to review later"
+- " I want to be able to review trouble words at my leisure later on and rank them based on difficulty"
+
 # React + Express No-Fluff Boilerplate
 
 A boilerplate project for anyone interested in making a project that uses React and Express.
