@@ -41,7 +41,7 @@ let testDB = [{
   interval: 1
   },]
 
-class flashcards {
+class Flashcards {
   constructor(wordList) {
     this.cardlist = wordList;
     this.roundNumber = 0;
@@ -103,15 +103,10 @@ class flashcards {
     console.log(`Card ${this.roundNumber + 1}`)
     console.log(cardFromPool);
     this.roundNumber++
-    return cardFromPool
+    // return cardFromPool
+    return 'Card ' + this.roundNumber
   }
 
 }
 
-let game = new flashcards(testDB)
-game.card()
-game.card()
-game.card()
-game.card()
-game.card()
-game.card()
+export default Flashcards;
