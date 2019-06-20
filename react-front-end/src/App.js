@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import './App.css';
+import DragAndDrop from './drag_and_drop.js';
+import FileList from './file_list.js';
 
 class App extends Component {
   constructor(props) {
@@ -26,10 +28,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <h1>{ this.state.message }</h1>
+        <h1> {this.state.message} </h1>
         <button onClick={this.fetchData} >
           Fetch Data
         </button>        
+        <h2>Test</h2>
+        <DragAndDrop />
+        <FileList />
       </div>
     );
   }
