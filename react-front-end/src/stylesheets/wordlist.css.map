@@ -1,8 +1,8 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,AAAA,kBAAkB,CAAC;EACjB,gBAAgB,EAAE,IAAI;CACvB",
     "sources": [
-        "wordlist.sass"
+        "wordlist.scss"
     ],
     "names": [],
     "file": "wordlist.css"

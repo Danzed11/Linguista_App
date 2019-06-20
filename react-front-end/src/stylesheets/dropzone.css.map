@@ -1,8 +1,8 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,AAAA,SAAS,CAAC;EACR,gBAAgB,EAAE,MAAM;CACzB",
     "sources": [
-        "dropzone.sass"
+        "dropzone.scss"
     ],
     "names": [],
     "file": "dropzone.css"
