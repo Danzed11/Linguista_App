@@ -17,7 +17,7 @@ App.get('/api/data', (req, res) => res.json({
 
 App.get('/words/data', (req, res) => {
   knex('wordlist').asCallback((err,result) => {
-    res.json({data: result});
+    res.json(result);
   });
 });
 

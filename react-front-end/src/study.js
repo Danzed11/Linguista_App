@@ -14,65 +14,21 @@ class Study extends Component {
     this.state = {
       startPage: true,
       showAnswer: false,
-      testDB: [{
-        user_id: 1,
-        foreign_word: 'bonjour',
-        english_word: 'hello',
-        interval: 3
-        },
-        {
-        user_id: 1,
-        foreign_word: 'dancer',
-        english_word: 'dance',
-        interval: 2
-        },
-        {
-        user_id: 1,
-        foreign_word: 'manger',
-        english_word: 'eat',
-        interval: 2
-        },
-        {
-        user_id: 1,
-        foreign_word: 'cocasse',
-        english_word: 'comical',
-        interval: 1
-        },
-        {
-        user_id: 1,
-        foreign_word: 'mechant',
-        english_word: 'mean',
-        interval: 1
-        },
-        {
-        user_id: 1,
-        foreign_word: 'parle',
-        english_word: 'speak',
-        interval: 1
-        },
-        {
-        user_id: 1,
-        foreign_word: 'edifice',
-        english_word: 'building',
-        interval: 1
-        }],
       message: 'Click the button to load data!'}
   }
 
   fetchData = () => {
-    axios.get('/api/data') // You can simply make your requests to "/api/whatever you want"
+    axios.get('/words/data') // You can simply make your requests to "/api/whatever you want"
     .then((response) => {
-      // handle success
-      console.log(response.data) // The entire response from the Rails API
-
-      console.log(response.data.message) // Just the message
       this.setState({
-        message: response.data.message
+        cardlist: response.data
       });
+    }).then((response) => {
+      this.setState({flashcardInstance: new flashcard(this.state.cardlist)});
     })
   }
   componentDidMount() {
-    this.setState({flashcardInstance: new flashcard(this.state.testDB)})
+    this.fetchData();
   }
   startUp = () => {
     this.setState({

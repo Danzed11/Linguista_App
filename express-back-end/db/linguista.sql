@@ -21,7 +21,19 @@ INSERT INTO library (title, book, coverArt, bookmark)
 
 
 INSERT INTO wordlist (foreign_word, english_word, interval)
-  VALUES ('tabernaak', 'fuck', 1);
+  VALUES ('méduse', 'jellyfish', 1);
 INSERT INTO wordlist (foreign_word, english_word, interval)
-  VALUES ('citrouille', 'pumpkin', 1);
+  VALUES ('papillon', 'butterfly', 1);
+INSERT INTO wordlist (foreign_word, english_word, interval)
+  VALUES ('vache', 'cow', 1);
+INSERT INTO wordlist (foreign_word, english_word, interval)
+  VALUES ('chèvre', 'goat', 1);
+INSERT INTO wordlist (foreign_word, english_word, interval)
+  VALUES ('taureau', 'bull', 1);
+INSERT INTO wordlist (foreign_word, english_word, interval)
+  VALUES ('grenouille', 'frog', 1);
+INSERT INTO wordlist (foreign_word, english_word, interval)
+  VALUES ('élan', 'moose', 1);
+INSERT INTO wordlist (foreign_word, english_word, interval)
+  VALUES ('chauve-souris', 'bat', 1);
 
