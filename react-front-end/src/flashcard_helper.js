@@ -1,46 +1,3 @@
-let testDB = [{
-  user_id: 1,
-  foreign_word: 'bonjour',
-  english_word: 'hello',
-  interval: 3
-  },
-  {
-  user_id: 1,
-  foreign_word: 'dancer',
-  english_word: 'dance',
-  interval: 2
-  },
-  {
-  user_id: 1,
-  foreign_word: 'manger',
-  english_word: 'eat',
-  interval: 2
-  },
-  {
-  user_id: 1,
-  foreign_word: 'cocasse',
-  english_word: 'comical',
-  interval: 1
-  },
-  {
-  user_id: 1,
-  foreign_word: 'mechant',
-  english_word: 'mean',
-  interval: 1
-  },
-  {
-  user_id: 1,
-  foreign_word: 'parle',
-  english_word: 'speak',
-  interval: 1
-  },
-  {
-  user_id: 1,
-  foreign_word: 'edifice',
-  english_word: 'building',
-  interval: 1
-  },]
-
 class Flashcards {
   constructor(wordList) {
     this.cardlist = wordList;
@@ -103,8 +60,7 @@ class Flashcards {
     console.log(`Card ${this.roundNumber + 1}`)
     console.log(cardFromPool);
     this.roundNumber++
-    // return cardFromPool
-    return 'Card ' + this.roundNumber
+    return cardFromPool
   }
 
 }

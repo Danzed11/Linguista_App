@@ -8,7 +8,8 @@ class Study extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      testDB: [{
+      message: 'Click the button to load data!',
+      flashcardInstance: new flashcard([{
         user_id: 1,
         foreign_word: 'bonjour',
         english_word: 'hello',
@@ -49,20 +50,13 @@ class Study extends Component {
         foreign_word: 'edifice',
         english_word: 'building',
         interval: 1
-        }],
-      message: 'Click the button to load data!',
-      flashcardInstance: new flashcard([{
-        user_id: 1,
-        foreign_word: 'bonjour',
-        english_word: 'hello',
-        interval: 3
-        },
-        {
-        user_id: 1,
-        foreign_word: 'dancer',
-        english_word: 'dance',
-        interval: 2
-        }])
+        }]),
+      displayCard: {
+          user_id: 1,
+          foreign_word: 'bonjour',
+          english_word: 'hello',
+          interval: 3
+        }
     }
   }
 
@@ -80,18 +74,31 @@ class Study extends Component {
   }
 
   newCard = () => {
-    this.setState({message: this.state.flashcardInstance.card()})
+    this.setState({displayCard: this.state.flashcardInstance.card()})
   }
 
   render() {
-    return (
-      <div className="App">
-        <h1>{ this.state.message }</h1>
-        <button onClick={this.newCard} >
-          Fetch Data
-        </button>
-      </div>
-    );
+    if (this.state.displayCard) {
+      return (
+        <div className="App">
+          <h1>{ this.state.message }</h1>
+          <button onClick={this.newCard} >
+            New Card
+          </button>
+          <p>
+            {this.state.displayCard.foreign_word}<br/>
+            {this.state.displayCard.english_word}
+          </p>
+        </div>
+      );
+    } else {
+      return (<div className="App">
+          <h1>{ this.state.message }</h1>
+          <button onClick={this.newCard} >
+            New Card
+          </button>
+        </div>)
+    }
   }
 }
 
