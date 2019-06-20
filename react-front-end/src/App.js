@@ -4,6 +4,8 @@ import './App.css';
 import Nav from './nav.js';
 import Booklist from './bookList.js';
 import Wordlist from './wordList.js';
+import Dropzone from './dropZone.js';
+import Flashcard from './flashcard.js';
 
 class App extends Component {
 	constructor(props) {
@@ -31,12 +33,9 @@ class App extends Component {
 		return (
 			<div className="App">
 				<Nav />
-
-				<h1>{this.state.message}</h1>
-				<button onClick={this.fetchData}>Fetch Data</button>
 				<Booklist />
-				<div class="dropZone" />
-				<div class="flashCard" />
+				<Dropzone />
+				<Flashcard message={this.state.message} />
 				<Wordlist />
 			</div>
 		);
