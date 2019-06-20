@@ -6,6 +6,7 @@ import Booklist from './bookList.js';
 import Wordlist from './wordList.js';
 import Dropzone from './dropZone.js';
 import Flashcard from './flashcard.js';
+import Study from './study.js'
 
 class App extends Component {
 	constructor(props) {
@@ -36,6 +37,7 @@ class App extends Component {
 				<Dropzone />
 				<Flashcard message={this.state.message} />
 				<Wordlist />
+				<Study />
 			</div>
 		);
 	}
