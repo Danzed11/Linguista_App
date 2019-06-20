@@ -25,9 +25,3 @@ INSERT INTO wordlist (foreign_word, english_word, interval)
 INSERT INTO wordlist (foreign_word, english_word, interval)
   VALUES ('citrouille', 'pumpkin', 1);
 
-/*
-To set up database, just go into psql in the express-back-end folder. Run
-/i db/linguista.sql
-
-Tables should be created.
-*/

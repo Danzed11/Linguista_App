@@ -6,7 +6,9 @@ Improve your foreign language skills by reading your favourite books! Linguista 
 To set up database:
   1. In terminal go to the express-back-end folder.
   2. Run `psql` in the terminal.
-  3. Run `/i db/linguista.sql`.
+  3. Run `create database linguista;`
+  4. Run `\c linguista`
+  5. Run `/i db/linguista.sql`.
 
 Tables should be created locally for your server instance.
 
