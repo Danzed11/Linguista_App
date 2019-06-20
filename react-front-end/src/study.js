@@ -4,14 +4,17 @@ import flashcard from './flashcard_helper';
 
 //Component that houses flashcard game.
 
+//Replace this.state.testDB with nothing
+//On component did mount, do a fetchData, and send that directly
+//into a setState creating a new flashcard class.
+
 class Study extends Component {
   constructor(props) {
     super(props)
     this.state = {
       startPage: true,
       showAnswer: false,
-      message: 'Click the button to load data!',
-      flashcardInstance: new flashcard([{
+      testDB: [{
         user_id: 1,
         foreign_word: 'bonjour',
         english_word: 'hello',
@@ -52,14 +55,14 @@ class Study extends Component {
         foreign_word: 'edifice',
         english_word: 'building',
         interval: 1
-        }]),
+        }],
+      message: 'Click the button to load data!',
       displayCard: {
           round: 1,
           user_id: 1,
           foreign_word: 'bonjour',
           english_word: 'hello',
-          interval: 3
-        }
+          interval: 3},
     }
   }
 
@@ -75,7 +78,9 @@ class Study extends Component {
       });
     })
   }
-
+  componentDidMount() {
+    this.setState({flashcardInstance: new flashcard(this.state.testDB)})
+  }
   startUp = () => {
     this.setState({startPage: false})
   }
@@ -120,7 +125,13 @@ class Study extends Component {
           <hr/>
           <h2>{ this.state.displayCard.english_word}</h2>
           <button onClick={this.newCard} >
-            Next Card
+            Couldn't remember
+          </button>
+          <button onClick={this.newCard} >
+            Barely Got it
+          </button>
+          <button onClick={this.newCard} >
+            Easy to answer
           </button>
         </div>)
     }
