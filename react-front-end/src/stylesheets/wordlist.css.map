@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "wordlist.sass"
+    ],
+    "names": [],
+    "file": "wordlist.css"
+}
