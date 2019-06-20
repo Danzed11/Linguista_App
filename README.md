@@ -1,6 +1,14 @@
 # Linguista
 Improve your foreign language skills by reading your favourite books! Linguista is built using React and Express.
 
+# SET UP THE DATABASE
+
+To set up database:
+  1. In terminal go to the express-back-end folder.
+  2. Run `psql` in the terminal.
+  3. Run `/i db/linguista.sql`.
+
+Tables should be created locally for your server instance.
 
 ## User Stories
 - "As a user, I want to improve my french comprehension skills."
