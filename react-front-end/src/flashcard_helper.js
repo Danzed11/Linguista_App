@@ -65,7 +65,7 @@ class Flashcards {
     console.log(`Card ${this.roundNumber + 1}`)
     console.log(cardFromPool);
     this.roundNumber++
-    cardFromPool.round = this.roundNumber + 1
+    cardFromPool.round = this.roundNumber
     return cardFromPool
   }
 

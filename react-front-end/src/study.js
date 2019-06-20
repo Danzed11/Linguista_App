@@ -56,14 +56,7 @@ class Study extends Component {
         english_word: 'building',
         interval: 1
         }],
-      message: 'Click the button to load data!',
-      displayCard: {
-          round: 1,
-          user_id: 1,
-          foreign_word: 'bonjour',
-          english_word: 'hello',
-          interval: 3},
-    }
+      message: 'Click the button to load data!'}
   }
 
   fetchData = () => {
@@ -82,7 +75,10 @@ class Study extends Component {
     this.setState({flashcardInstance: new flashcard(this.state.testDB)})
   }
   startUp = () => {
-    this.setState({startPage: false})
+    this.setState({
+      displayCard: this.state.flashcardInstance.card(),
+      startPage: false
+    })
   }
 
   newCard = () => {
