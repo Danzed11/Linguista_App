@@ -52,14 +52,20 @@ class Flashcards {
   }
 
   card() {
-    let roundInt = this.order[this.roundNumber]
-    let cardFromPool = this.cardlist.filter(function(element) {
-      return element.interval == roundInt;
-    })
+    let roundInt = this.order[this.roundNumber % this.order.length]
+    let cardFromPool = [];
+    while (cardFromPool.length == 0) {
+      cardFromPool = this.cardlist.filter(function(element) {
+        return element.interval == roundInt;
+      })
+      roundInt++
+    }
+
     cardFromPool = cardFromPool[Math.floor(Math.random()*cardFromPool.length)];
     console.log(`Card ${this.roundNumber + 1}`)
     console.log(cardFromPool);
     this.roundNumber++
+    cardFromPool.round = this.roundNumber + 1
     return cardFromPool
   }
 

@@ -20,16 +20,16 @@ class App extends Component {
       this.setState({
         message: response.data.message
       });
-    }) 
+    })
   }
 
   render() {
     return (
       <div className="App">
-        <h1>{ this.state.message }</h1>
+        <h1>Card: { this.state.displayCard.round }</h1>
         <button onClick={this.fetchData} >
           Fetch Data
-        </button>        
+        </button>
       </div>
     );
   }

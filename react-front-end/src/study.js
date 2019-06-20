@@ -8,6 +8,8 @@ class Study extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      startPage: true,
+      showAnswer: false,
       message: 'Click the button to load data!',
       flashcardInstance: new flashcard([{
         user_id: 1,
@@ -52,6 +54,7 @@ class Study extends Component {
         interval: 1
         }]),
       displayCard: {
+          round: 1,
           user_id: 1,
           foreign_word: 'bonjour',
           english_word: 'hello',
@@ -73,29 +76,51 @@ class Study extends Component {
     })
   }
 
+  startUp = () => {
+    this.setState({startPage: false})
+  }
+
   newCard = () => {
-    this.setState({displayCard: this.state.flashcardInstance.card()})
+    this.setState({
+      displayCard: this.state.flashcardInstance.card(),
+      showAnswer: false
+    })
+  }
+
+  displayAnswer = () => {
+    this.setState({showAnswer: true})
   }
 
   render() {
-    if (this.state.displayCard) {
+    if (this.state.startPage) {
+      return (
+        <div className="flashcard-game">
+          <h2> Start Studying </h2>
+          <button onClick={this.startUp} >
+            Begin
+          </button>
+        </div>
+        )
+    }
+    if (!this.state.showAnswer) {
       return (
         <div className="App">
-          <h1>{ this.state.message }</h1>
-          <button onClick={this.newCard} >
-            New Card
+          <h1>Card: { this.state.displayCard.round }</h1>
+          <h2>{ this.state.displayCard.foreign_word}</h2>
+          <hr/>
+          <button onClick={this.displayAnswer} >
+            Show answer!
           </button>
-          <p>
-            {this.state.displayCard.foreign_word}<br/>
-            {this.state.displayCard.english_word}
-          </p>
         </div>
       );
     } else {
       return (<div className="App">
-          <h1>{ this.state.message }</h1>
+          <h1>Card: { this.state.displayCard.round }</h1>
+          <h2>{ this.state.displayCard.foreign_word}</h2>
+          <hr/>
+          <h2>{ this.state.displayCard.english_word}</h2>
           <button onClick={this.newCard} >
-            New Card
+            Next Card
           </button>
         </div>)
     }
