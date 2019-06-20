@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './stylesheets/wordlist.css';
 
 class Wordlist extends Component {
 	render() {

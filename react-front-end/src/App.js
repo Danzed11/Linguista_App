@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import './App.css';
+import './stylesheets/App.css';
 import Nav from './nav.js';
 import Booklist from './bookList.js';
 import Wordlist from './wordList.js';
