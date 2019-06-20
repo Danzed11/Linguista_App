@@ -1,5 +1,5 @@
 # Linguista
-Improve your foreign language skills by reading your favourite books! Linguista is built using React and Express. 
+Improve your foreign language skills by reading your favourite books! Linguista is built using React and Express.
 
 
 ## User Stories
