@@ -14,4 +14,6 @@
 	top: 70px;
 	position: relative;
 	height: 50vh;
+	list-style: none;
+	@include page-container;
 }

@@ -9,4 +9,10 @@
   border: grey solid 1px;
   border-radius: 12px;
 }
+
+#dropcontainer {
+  background-color: paleturquoise;
+  border: grey solid 1px;
+  border-radius: 12px;
+}
 /*# sourceMappingURL=dropzone.css.map */
