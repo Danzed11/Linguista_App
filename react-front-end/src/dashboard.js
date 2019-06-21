@@ -13,10 +13,14 @@ class Dashboard extends Component {
 		return (
 			<div className="App">
 				<Nav />
-				<DashboardLibrary />
-				<Dropzone />
-				<Flashcard />
-				<DashboardWordlist />
+				<div className="dash-row">
+					<DashboardLibrary />
+					<Flashcard />
+				</div>
+				<div className="dash-row">
+					<Dropzone />
+					<DashboardWordlist />
+				</div>
 			</div>
 		);
 	}

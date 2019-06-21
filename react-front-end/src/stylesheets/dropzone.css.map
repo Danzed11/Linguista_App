@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,SAAS,CAAC;EACT,gBAAgB,EAAE,MAAM;EACxB,QAAQ,EAAE,QAAQ;EAClB,MAAM,EAAE,IAAI;CACZ",
+    "mappings": "AAAA,AAAA,SAAS,CAAC;EACT,gBAAgB,EAAE,MAAM;EACxB,QAAQ,EAAE,QAAQ;EAClB,GAAG,EAAE,IAAI;EACT,MAAM,EAAE,IAAI;CACZ",
     "sources": [
         "dropzone.scss"
     ],
