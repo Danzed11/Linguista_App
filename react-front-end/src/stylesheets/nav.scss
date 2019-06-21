@@ -1,3 +1,20 @@
 nav {
-  background-color: red;
+	background-color: red;
+	position: fixed;
+	width: 100vw;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin-top: 0;
+}
+
+.nav-left {
+	justify-self: flex-start;
+	padding: 0 20px;
+	align-self: center;
+}
+.nav-right {
+	justify-self: flex-end;
+	padding: 0 20px;
+	align-self: center;
 }

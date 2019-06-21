@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
-import {BrowserRouter, Route} from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import axios from 'axios';
 import './stylesheets/App.css';
-import Nav from './nav.js';
+import Nav from './components/nav.js';
 import Booklist from './bookList.js';
 import Wordlist from './wordList.js';
+
 import Dropzone from './dropZone.js';
 import Flashcard from './flashcard.js';
 
@@ -48,5 +49,3 @@ class App extends Component {
 }
 
 export default App;
-
-

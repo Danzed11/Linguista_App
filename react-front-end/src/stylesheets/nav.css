@@ -1,4 +1,33 @@
 nav {
   background-color: red;
+  position: fixed;
+  width: 100vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 0;
+}
+
+.nav-left {
+  justify-self: flex-start;
+  padding: 0 20px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.nav-right {
+  justify-self: flex-end;
+  padding: 0 20px;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 /*# sourceMappingURL=nav.css.map */
