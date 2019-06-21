@@ -13,4 +13,7 @@
 	position: relative;
 	top: 70px;
 	height: 50vh;
+	.word {
+		@include dash-container;
+	}
 }

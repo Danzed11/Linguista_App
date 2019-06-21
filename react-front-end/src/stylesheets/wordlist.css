@@ -15,4 +15,9 @@
   top: 70px;
   height: 50vh;
 }
+
+.wordlist-page .word {
+  border: grey solid 1px;
+  border-radius: 12px;
+}
 /*# sourceMappingURL=wordlist.css.map */
