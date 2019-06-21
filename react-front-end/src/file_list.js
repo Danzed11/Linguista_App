@@ -11,12 +11,13 @@ class FileList extends Component {
     ]
   }
 
-  // getFileContents = (files, reader, file) => {
-  //   // Read a file and call an Anvil method.
-  //   reader.onloadend = function() {
-  //     anvil.call(files.target, "drag_drop_upload", file.type, reader.result, file.name);
-  //   }        
-  //   reader.readAsBinaryString(file);
+  // button = () => {
+  //   let span = document.getElementById("words")
+  //   for (i of span) {
+  //     i.addEventListener('click', function() {
+  //       console.log("clicked");
+  //     })
+  //   }
   // }
 
   handleDrop = (files) => {
@@ -40,6 +41,9 @@ class FileList extends Component {
     return (
       <div id="dropcontainer">
       <h2>Drop Zone</h2>
+      <span id="words">
+        Hello everyone, today I am going to converse about bacon. Spicy jalapeno bacon ipsum dolor amet pork
+      </span>
       <DragAndDrop handleDrop={this.handleDrop}>
         <div style={{height: 300, width: 250}}>
           {this.state.files.map((file, index) =>

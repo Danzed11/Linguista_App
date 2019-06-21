@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import axios from 'axios';
-import DragAndDrop from './drag_and_drop.js';
-import FileList from './file_list.js';
 import './stylesheets/App.css';
 
 import Nav from './components/nav.js';
