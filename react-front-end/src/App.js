@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import {BrowserRouter, Route} from 'react-router-dom';
 import axios from 'axios';
 import './stylesheets/App.css';
 import Nav from './nav.js';
@@ -6,7 +7,11 @@ import Booklist from './bookList.js';
 import Wordlist from './wordList.js';
 import Dropzone from './dropZone.js';
 import Flashcard from './flashcard.js';
+
 import Study from './study.js'
+
+import Dashboard from './dashboard.js';
+
 
 class App extends Component {
 	constructor(props) {
@@ -31,16 +36,16 @@ class App extends Component {
 
 	render() {
 		return (
-			<div className="App">
-				<Nav />
-				<Booklist />
-				<Dropzone />
-				<Flashcard message={this.state.message} />
-				<Wordlist />
-				<Study />
-			</div>
+			<BrowserRouter>
+				<Route path='/' component={Dropzone} />
+				<Route path='/dashboard' component={Dashboard} />
+				<Route path='/library' component={Booklist} />
+				<Route path='/wordlist' component={Wordlist} />
+			</BrowserRouter>
 		);
 	}
 }
 
 export default App;
+
+

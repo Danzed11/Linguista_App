@@ -1,8 +1,8 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,AAAA,iBAAiB,CAAC;EAChB,gBAAgB,EAAE,MAAM;CACzB",
     "sources": [
-        "booklist.sass"
+        "booklist.scss"
     ],
     "names": [],
     "file": "booklist.css"

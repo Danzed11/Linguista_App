@@ -1,8 +1,8 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,AAAA,mBAAmB,CAAC;EAClB,gBAAgB,EAAE,IAAI;CACvB",
     "sources": [
-        "flashcard.sass"
+        "flashcard.scss"
     ],
     "names": [],
     "file": "flashcard.css"

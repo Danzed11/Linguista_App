@@ -1,8 +1,8 @@
 {
     "version": 3,
-    "mappings": "",
+    "mappings": "AAAA,AAAA,GAAG,CAAC;EACF,gBAAgB,EAAE,GAAG;CACtB",
     "sources": [
-        "nav.sass"
+        "nav.scss"
     ],
     "names": [],
     "file": "nav.css"
