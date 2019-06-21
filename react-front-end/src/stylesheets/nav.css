@@ -1,5 +1,6 @@
 nav {
-  background-color: red;
+  background-color: black;
+  color: aliceblue;
   position: fixed;
   width: 100vw;
   display: -webkit-box;

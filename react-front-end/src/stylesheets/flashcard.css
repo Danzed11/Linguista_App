@@ -1,12 +1,14 @@
 .flashcardContainer {
-  background-color: burlywood;
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
+  background-color: red;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   top: 50px;
   position: relative;
   padding: 20px;
   margin-left: 20px;
+  border: grey solid 1px;
+  border-radius: 12px;
 }
 
 .flashcard-game {

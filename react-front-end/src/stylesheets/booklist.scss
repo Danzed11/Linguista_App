@@ -1,10 +1,13 @@
+@import '_variables';
+
 .libraryContainer-dashboard {
-	background-color: purple;
+	// background-color: purple;
 	top: 50px;
 	position: relative;
 	flex: 1;
 	padding: 20px;
 	margin-right: 20px;
+	@include dash-container;
 }
 .library-page {
 	background-color: purple;

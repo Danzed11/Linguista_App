@@ -1,9 +1,12 @@
+@import '_variables';
+
 .wordlistContainer-dashboard {
-	background-color: blue;
+	// background-color: blue;
 	position: relative;
 	flex: 1;
 	padding: 20px;
 	margin-left: 20px;
+	@include dash-container;
 }
 .wordlist-page {
 	background-color: blue;

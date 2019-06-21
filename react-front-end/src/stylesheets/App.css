@@ -1,3 +1,5 @@
+/* @import '_variables'; */
+
 body {
 	padding: 0px;
 	margin: 0px;
@@ -16,7 +18,7 @@ body {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-around;
-	height: 45%;
+	height: 43%;
 	padding: 20px;
 }
 

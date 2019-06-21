@@ -1,8 +1,9 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,SAAS,CAAC;EACT,gBAAgB,EAAE,MAAM;EACxB,QAAQ,EAAE,QAAQ;EAClB,IAAI,EAAE,CAAC;EACP,OAAO,EAAE,IAAI;EACb,YAAY,EAAE,IAAI;CAClB",
+    "mappings": "AAEA,AAAA,SAAS,CAAC;EACT,gBAAgB,EAAE,aAAa;EAC/B,QAAQ,EAAE,QAAQ;EAClB,IAAI,EAAE,CAAC;EACP,OAAO,EAAE,IAAI;EACb,YAAY,EAAE,IAAI;ECNlB,MAAM,EAAE,cAAc;EACtB,aAAa,EAAE,IAAI;CDOnB",
     "sources": [
-        "dropzone.scss"
+        "dropzone.scss",
+        "_variables.scss"
     ],
     "names": [],
     "file": "dropzone.css"
