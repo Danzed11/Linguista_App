@@ -1,4 +1,19 @@
-.libraryContainer {
+@import '_variables';
+
+.libraryContainer-dashboard {
+	// background-color: purple;
+	top: 50px;
+	position: relative;
+	flex: 1;
+	padding: 20px;
+	margin-right: 20px;
+	@include dash-container;
+}
+.library-page {
 	background-color: purple;
-	margin-top: 70px;
+	top: 70px;
+	position: relative;
+	height: 50vh;
+	list-style: none;
+	@include page-container;
 }

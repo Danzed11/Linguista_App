@@ -26,7 +26,7 @@ class App extends Component {
 			.then(response => {
 				// handle success
 				console.log(response.data); // The entire response from the Rails API
-        console.log(response.data.message); // Just the message
+				console.log(response.data.message); // Just the message
 				this.setState({
 					message: response.data.message,
 				});
@@ -36,7 +36,7 @@ class App extends Component {
 	render() {
 		return (
 			<BrowserRouter>
-				<Route path='/' exact component={Nav} />
+				<Route path='/' component={Nav} />
 				<Route path='/dashboard' component={Dashboard} />
 				<Route path='/library' component={Booklist} />
 				<Route path='/wordlist' component={Wordlist} />

@@ -1,11 +1,15 @@
+// @import '_variables';
+
 nav {
-	background-color: red;
+	background-color: black;
+	color: aliceblue;
 	position: fixed;
 	width: 100vw;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
-	margin-top: 0;
+	top: 0;
+	left: 0;
 }
 
 .nav-left {

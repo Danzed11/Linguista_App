@@ -1,5 +1,6 @@
 nav {
-  background-color: red;
+  background-color: black;
+  color: aliceblue;
   position: fixed;
   width: 100vw;
   display: -webkit-box;
@@ -12,7 +13,8 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 0;
+  top: 0;
+  left: 0;
 }
 
 .nav-left {

@@ -1,8 +1,9 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,mBAAmB,CAAC;EACnB,gBAAgB,EAAE,SAAS;EAC3B,IAAI,EAAE,CAAC;CACP",
+    "mappings": "AAEA,AAAA,mBAAmB,CAAC;EACnB,gBAAgB,ECWJ,GAAG;EDVf,IAAI,EAAE,CAAC;EACP,GAAG,EAAE,IAAI;EACT,QAAQ,EAAE,QAAQ;EAClB,OAAO,EAAE,IAAI;EACb,WAAW,EAAE,IAAI;ECPjB,MAAM,EAAE,cAAc;EACtB,aAAa,EAAE,IAAI;CDQnB;;AAED,AAAA,eAAe,CAAC;ECPf,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;EACvB,WAAW,EAAE,MAAM;EACnB,MAAM,EAAE,IAAI;EACZ,QAAQ,EAAE,QAAQ;EAClB,GAAG,EAAE,IAAI;CDIT",
     "sources": [
-        "flashcard.scss"
+        "flashcard.scss",
+        "_variables.scss"
     ],
     "names": [],
     "file": "flashcard.css"

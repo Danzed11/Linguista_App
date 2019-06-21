@@ -1,4 +1,18 @@
 .dropZone {
-  background-color: yellow;
+  background-color: paleturquoise;
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 20px;
+  margin-right: 20px;
+  border: grey solid 1px;
+  border-radius: 12px;
+}
+
+#dropcontainer {
+  background-color: paleturquoise;
+  border: grey solid 1px;
+  border-radius: 12px;
 }
 /*# sourceMappingURL=dropzone.css.map */

@@ -1,3 +1,16 @@
+@import '_variables';
+
 .dropZone {
-  background-color: yellow;
+	background-color: paleturquoise;
+	position: relative;
+	flex: 1;
+	padding: 20px;
+	margin-right: 20px;
+	@include dash-container;
+}
+
+#dropcontainer {
+	background-color: paleturquoise;
+	@include dash-container;
+	// @include page-container;
 }
