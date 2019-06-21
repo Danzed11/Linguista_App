@@ -6,6 +6,18 @@ const PORT = 8080;
 const knexConfig  = require("./knexfile")["development"];
 const knex        = require("knex")(knexConfig);
 
+//Large File Upload handlers
+const multer  =   require('multer');
+const storage =   multer.diskStorage({
+  destination: function (req, file, callback) {
+    callback(null, './uploads');
+  },
+  filename: function (req, file, callback) {
+    callback(null, 'epub');
+  }
+});
+const upload = multer({ storage : storage}).single('uploadedEpub');
+
 // Express Configuration
 App.use(BodyParser.urlencoded({ extended: false }));
 App.use(Express.static('public'));
@@ -20,6 +32,15 @@ App.get('/words/data', (req, res) => {
     res.json(result);
   });
 });
+
+App.post('/upload', (req, res) => {
+  upload(req,res,function(err) {
+        if(err) {
+            return res.end("Error uploading file.");
+        }
+        res.end("File is uploaded");
+    });
+})
 
 //Set up POST route to update word interval number via flashcard game.
 
