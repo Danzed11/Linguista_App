@@ -1,12 +1,10 @@
 import React, { Component } from 'react';
-import {BrowserRouter, Route} from 'react-router-dom';
+import { BrowserRouter, Route } from 'react-router-dom';
 import axios from 'axios';
 import './stylesheets/App.css';
-import Nav from './nav.js';
+import Nav from './components/nav.js';
 import Booklist from './bookList.js';
 import Wordlist from './wordList.js';
-import Dropzone from './dropZone.js';
-import Flashcard from './flashcard.js';
 import Dashboard from './dashboard.js';
 
 class App extends Component {
@@ -34,15 +32,13 @@ class App extends Component {
 	render() {
 		return (
 			<BrowserRouter>
-				<Route path='/' component={Dropzone} />
-				<Route path='/dashboard' component={Dashboard} />
-				<Route path='/library' component={Booklist} />
-				<Route path='/wordlist' component={Wordlist} />
+				<Route path="/" component={Nav} />
+				<Route path="/dashboard" component={Dashboard} />
+				<Route path="/library" component={Booklist} />
+				<Route path="/wordlist" component={Wordlist} />
 			</BrowserRouter>
 		);
 	}
 }
 
 export default App;
-
-

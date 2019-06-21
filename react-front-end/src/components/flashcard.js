@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './stylesheets/flashcard.css';
+import '../stylesheets/flashcard.css';
 
 class Flashcard extends Component {
 	render() {
