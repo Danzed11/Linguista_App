@@ -3,8 +3,10 @@
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
-  top: 70px;
+  top: 50px;
   position: relative;
+  padding: 20px;
+  margin-left: 20px;
 }
 
 .flashcard-game {

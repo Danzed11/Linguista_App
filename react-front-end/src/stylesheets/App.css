@@ -16,7 +16,7 @@ body {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-around;
-	height: 50%;
+	height: 45%;
 	padding: 20px;
 }
 
