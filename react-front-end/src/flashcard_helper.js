@@ -21,9 +21,8 @@ class Flashcards {
 
   recursiveOrder (n) {
     let self = this
-    if (n != 0) {
+    if (n !== 0) {
       let output = []
-      let output2 = []
       output.push(self.recursiveOrder(n-1))
       output.push(self.recursiveOrder(n-1))
       output.push(n);
@@ -54,9 +53,9 @@ class Flashcards {
   card() {
     let roundInt = this.order[this.roundNumber % this.order.length]
     let cardFromPool = [];
-    while (cardFromPool.length == 0) {
+    while (cardFromPool.length === 0) {
       cardFromPool = this.cardlist.filter(function(element) {
-        return element.interval == roundInt;
+        return element.interval = roundInt;
       })
       roundInt++
     }

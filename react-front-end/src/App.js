@@ -4,17 +4,15 @@ import axios from 'axios';
 import DragAndDrop from './drag_and_drop.js';
 import FileList from './file_list.js';
 import './stylesheets/App.css';
+
 import Nav from './components/nav.js';
+import Dashboard from './dashboard.js';
 import Booklist from './bookList.js';
 import Wordlist from './wordList.js';
-
-import Dropzone from './dropZone.js';
-import Flashcard from './flashcard.js';
-
 import Study from './study.js'
 
-import Dashboard from './dashboard.js';
-
+// import Dropzone from './components/dropZone.js';
+// import Flashcard from './components/flashcard.js';
 
 class App extends Component {
 	constructor(props) {
@@ -40,7 +38,7 @@ class App extends Component {
 	render() {
 		return (
 			<BrowserRouter>
-				<Route path='/' exact component={Dropzone} />
+				<Route path='/' exact component={Nav} />
 				<Route path='/dashboard' component={Dashboard} />
 				<Route path='/library' component={Booklist} />
 				<Route path='/wordlist' component={Wordlist} />
