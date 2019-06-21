@@ -4,8 +4,8 @@ import './stylesheets/wordlist.css';
 class Wordlist extends Component {
 	render() {
 		return (
-			<div className="wordlistContainer">
-				<h1>this is the wordlist</h1>
+			<div className="wordlist-page">
+				<h1>DICKS DICKS DICKS</h1>
 			</div>
 		);
 	}
