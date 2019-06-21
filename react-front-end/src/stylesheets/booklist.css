@@ -1,4 +1,11 @@
-.libraryContainer {
+.libraryContainer-dashboard {
+  background-color: purple;
+  top: 70px;
+  position: relative;
+  height: 50vh;
+}
+
+.library-page {
   background-color: purple;
   top: 70px;
   position: relative;
