@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import './stylesheets/App.css';
 
 class DragAndDrop extends Component {
 
@@ -31,7 +32,6 @@ class DragAndDrop extends Component {
       this.setState({ drag: false })
     }
   }
-
 
   handleDrop = (e) => {
     e.preventDefault()
@@ -66,10 +66,9 @@ class DragAndDrop extends Component {
   render() {
     
     return (
-      <main>
-
+      <main id='dropcontainer'>
       <div style={{ display: 'inline-block', position: 'relative' }} ref={this.dropRef}
-      >
+      > 
         
         {this.state.drag &&
         <div style={{
@@ -85,7 +84,6 @@ class DragAndDrop extends Component {
         >
           <div className='filebox' style={{
             position: 'absolute',
-            border: 'solid black 2px',
             top: '50%',
             right: 0,
             left: 0,

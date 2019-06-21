@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import axios from 'axios';
-import './App.css';
 import DragAndDrop from './drag_and_drop.js';
 import FileList from './file_list.js';
 import './stylesheets/App.css';
