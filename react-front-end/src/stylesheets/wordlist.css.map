@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,kBAAkB,CAAC;EACjB,gBAAgB,EAAE,IAAI;CACvB",
+    "mappings": "AAAA,AAAA,kBAAkB,CAAC;EAClB,gBAAgB,EAAE,IAAI;EACtB,QAAQ,EAAE,QAAQ;EAClB,GAAG,EAAE,IAAI;EACT,MAAM,EAAE,IAAI;CACZ",
     "sources": [
         "wordlist.scss"
     ],

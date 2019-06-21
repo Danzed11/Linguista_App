@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,AAAA,iBAAiB,CAAC;EACjB,gBAAgB,EAAE,MAAM;EACxB,UAAU,EAAE,IAAI;CAChB",
+    "mappings": "AAAA,AAAA,iBAAiB,CAAC;EACjB,gBAAgB,EAAE,MAAM;EACxB,GAAG,EAAE,IAAI;EACT,QAAQ,EAAE,QAAQ;EAClB,MAAM,EAAE,IAAI;CACZ",
     "sources": [
         "booklist.scss"
     ],

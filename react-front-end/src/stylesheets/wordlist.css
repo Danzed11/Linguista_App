@@ -1,4 +1,7 @@
 .wordlistContainer {
   background-color: blue;
+  position: relative;
+  top: 70px;
+  height: 50vh;
 }
 /*# sourceMappingURL=wordlist.css.map */

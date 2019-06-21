@@ -3,5 +3,7 @@
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
+  top: 70px;
+  position: relative;
 }
 /*# sourceMappingURL=flashcard.css.map */

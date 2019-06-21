@@ -1,4 +1,6 @@
 .dropZone {
   background-color: yellow;
+  position: relative;
+  height: 50vh;
 }
 /*# sourceMappingURL=dropzone.css.map */

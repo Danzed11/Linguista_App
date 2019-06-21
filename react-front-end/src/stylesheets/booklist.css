@@ -1,5 +1,7 @@
 .libraryContainer {
   background-color: purple;
-  margin-top: 70px;
+  top: 70px;
+  position: relative;
+  height: 50vh;
 }
 /*# sourceMappingURL=booklist.css.map */
