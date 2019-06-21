@@ -37,10 +37,11 @@ class App extends Component {
 	render() {
 		return (
 			<BrowserRouter>
-				<Route path='/' component={Dropzone} />
+				<Route path='/' exact component={Dropzone} />
 				<Route path='/dashboard' component={Dashboard} />
 				<Route path='/library' component={Booklist} />
 				<Route path='/wordlist' component={Wordlist} />
+				<Route path='/study' component={Study} />
 			</BrowserRouter>
 		);
 	}
