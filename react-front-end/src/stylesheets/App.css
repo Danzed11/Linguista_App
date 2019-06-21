@@ -39,3 +39,7 @@
 		transform: rotate(360deg);
 	}
 }
+
+#dropcontainer {
+	background-color: paleturquoise
+}
