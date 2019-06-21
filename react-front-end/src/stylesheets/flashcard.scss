@@ -11,7 +11,10 @@
 }
 
 .flashcard-game {
+	display: flex;
+	justify-content: center;
 	align-items: center;
+	height: 80vh;
 	position: relative;
 	top: 70px;
 }
