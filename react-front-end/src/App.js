@@ -1,13 +1,20 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 import axios from 'axios';
 import DragAndDrop from './drag_and_drop.js';
 import FileList from './file_list.js';
 import './stylesheets/App.css';
-import Nav from './nav.js';
+import Nav from './components/nav.js';
 import Booklist from './bookList.js';
 import Wordlist from './wordList.js';
+
 import Dropzone from './dropZone.js';
 import Flashcard from './flashcard.js';
+
+import Study from './study.js'
+
+import Dashboard from './dashboard.js';
+
 
 class App extends Component {
 	constructor(props) {
@@ -23,35 +30,22 @@ class App extends Component {
 			.then(response => {
 				// handle success
 				console.log(response.data); // The entire response from the Rails API
-
-				console.log(response.data.message); // Just the message
+        console.log(response.data.message); // Just the message
 				this.setState({
 					message: response.data.message,
 				});
 			});
 	};
 
-  render() {
-    return (
-      <div>
-      <div className="App">
-        <h1> {this.state.message} </h1>
-        <button onClick={this.fetchData} >
-          Fetch Data
-        </button>        
-        <h2>Test</h2>
-        <DragAndDrop />
-        <FileList />
-      </div>
-  
-			<div className="App">
-				<Nav />
-				<Booklist />
-				<Dropzone />
-				<Flashcard message={this.state.message} />
-				<Wordlist />
-			</div>
-      </div>
+	render() {
+		return (
+			<BrowserRouter>
+				<Route path='/' exact component={Dropzone} />
+				<Route path='/dashboard' component={Dashboard} />
+				<Route path='/library' component={Booklist} />
+				<Route path='/wordlist' component={Wordlist} />
+				<Route path='/study' component={Study} />
+			</BrowserRouter>
 		);
 	}
 }

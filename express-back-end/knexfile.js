@@ -1,11 +1,9 @@
-require('./settings.json').config();
+const connection = require('./settings.json');
 
 module.exports = {
   development: {
     client: 'pg',
-    connection: {
-      database: 'lingsuista',
-    },
+    connection,
     migrations: {
       directory: './db/migrations',
       tableName: 'migrations',
