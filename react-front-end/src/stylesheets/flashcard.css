@@ -1,4 +1,7 @@
 .flashcardContainer {
-  background-color: azul;
+  background-color: burlywood;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
 }
 /*# sourceMappingURL=flashcard.css.map */

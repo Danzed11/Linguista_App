@@ -5,8 +5,12 @@ class Nav extends Component {
 	render() {
 		return (
 			<nav>
-				<h1>Linguista</h1>
-				<h4>Hi User</h4>
+				<div className="nav-left">
+					<h1>Linguista</h1>
+				</div>
+				<div className="nav-right">
+					<h4>Hi User</h4>
+				</div>
 			</nav>
 		);
 	}
