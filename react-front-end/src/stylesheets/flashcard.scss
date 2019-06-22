@@ -1,7 +1,7 @@
 @import '_variables';
 
 .flashcardContainer {
-	background-color: $primaryCol;
+	background-color: $secondaryCol;
 	flex: 1;
 	top: 50px;
 	position: relative;
@@ -11,5 +11,5 @@
 }
 
 .flashcard-game {
-	@include page-container;  
+	@include page-container;
 }

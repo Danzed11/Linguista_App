@@ -1,7 +1,7 @@
 @import '_variables';
 
 .dropZone {
-	background-color: paleturquoise;
+	background-color: $tertiaryCol;
 	position: relative;
 	flex: 1;
 	padding: 20px;
@@ -10,7 +10,7 @@
 }
 
 #dropcontainer {
-	background-color: paleturquoise;
+	background-color: $tertiaryCol;
 	@include dash-container;
 	// @include page-container;
 }

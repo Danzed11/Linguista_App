@@ -1,6 +1,6 @@
 nav {
-  background-color: black;
-  color: aliceblue;
+  background-color: #13292a;
+  color: #b5dfd6;
   position: fixed;
   width: 100vw;
   display: -webkit-box;
@@ -23,6 +23,9 @@ nav {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  /* font-family: 'Italianno', cursive; */
+  /* font-family: 'Niconne', cursive; */
+  font-family: 'Qwigley', cursive;
 }
 
 .nav-right {

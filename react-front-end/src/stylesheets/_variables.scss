@@ -1,6 +1,7 @@
 @mixin dash-container {
-	border: grey solid 1px;
+	border: $navCol solid 1px;
 	border-radius: 12px;
+	box-shadow: $shadow;
 }
 @mixin page-container {
 	display: flex;
@@ -11,7 +12,23 @@
 	top: 70px;
 }
 
+@mixin backgroundimg {
+	background-image: url('../images/iStock-514230814.jpg');
+	opacity: 0.5;
+	height: 100vh;
+	width: 100vw;
+}
+
 // Placeholder to be rewritten with actual color pallet choices
-$primaryCol: red;
-$secondaryCol: blue;
-$tertiaryCol: yellow;
+$primaryCol: #b5dfd6;
+$secondaryCol: #499fa4;
+$tertiaryCol: #91cabe;
+$navCol: #13292a;
+
+//Font Options for Logo
+$logo1: 'Italianno', cursive;
+$logo2: 'Niconne', cursive;
+$logo3: 'Qwigley', cursive;
+
+// box shadow setting:
+$shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
