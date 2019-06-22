@@ -29,10 +29,16 @@
           align-items: center;
   height: 80vh;
   position: relative;
-  top: 70px;
+  top: 60px;
   background-image: url("../images/iStock-514230814.jpg");
   opacity: 0.5;
   height: 100vh;
   width: 100vw;
+  overflow: hidden;
+  background-image: url("../images/iStock-514230814.jpg");
+  opacity: 0.5;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 }
 /*# sourceMappingURL=booklist.css.map */

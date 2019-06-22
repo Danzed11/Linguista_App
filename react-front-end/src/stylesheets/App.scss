@@ -1,0 +1,63 @@
+@import '_variables';
+
+body {
+	padding: 0px;
+	margin: 0px;
+	height: 100vh;
+}
+.App {
+	text-align: center;
+	position: fixed;
+	display: flex;
+	height: 100vh;
+	width: 100vw;
+	justify-content: space-around;
+	flex-flow: column nowrap;
+	@include backgroundimg;
+}
+#overlay {
+	bottom: 0;
+	left: 0;
+	height: 100vh;
+	background-color: #b5dfd6;
+	overflow: hidden;
+	// opacity: 0.5;
+}
+
+.dash-row {
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-around;
+	height: 43%;
+	padding: 20px;
+}
+
+// .App-logo {
+// 	animation: App-logo-spin infinite 20s linear;
+// 	height: 40vmin;
+// 	pointer-events: none;
+// }
+
+// .App-header {
+// 	background-color: #282c34;
+// 	min-height: 100vh;
+// 	display: flex;
+// 	flex-direction: column;
+// 	align-items: center;
+// 	justify-content: center;
+// 	font-size: calc(10px + 2vmin);
+// 	color: white;
+// }
+
+// .App-link {
+// 	color: #61dafb;
+// }
+
+// @keyframes App-logo-spin {
+// 	from {
+// 		transform: rotate(0deg);
+// 	}
+// 	to {
+// 		transform: rotate(360deg);
+// 	}
+// }

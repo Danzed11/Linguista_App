@@ -15,6 +15,7 @@ nav {
           justify-content: space-between;
   top: 0;
   left: 0;
+  z-index: 999;
 }
 
 .nav-left {
@@ -23,8 +24,6 @@ nav {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  /* font-family: 'Italianno', cursive; */
-  /* font-family: 'Niconne', cursive; */
   font-family: 'Qwigley', cursive;
 }
 

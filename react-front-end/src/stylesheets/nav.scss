@@ -10,14 +10,15 @@ nav {
 	justify-content: space-between;
 	top: 0;
 	left: 0;
+	z-index: 999;
 }
 
 .nav-left {
 	justify-self: flex-start;
 	padding: 0 20px;
 	align-self: center;
-	/* font-family: 'Italianno', cursive; */
-	/* font-family: 'Niconne', cursive; */
+	// font-family: 'Italianno', cursive;
+	// font-family: 'Niconne', cursive;
 	font-family: 'Qwigley', cursive;
 }
 .nav-right {

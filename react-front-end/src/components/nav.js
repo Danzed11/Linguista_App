@@ -6,7 +6,8 @@ class Nav extends Component {
 		return (
 			<nav>
 				<div className="nav-left">
-					<h1>Linguista</h1>
+					{/* <h1>Linguista</h1> */}
+					<img src="../public/images/logo1.png" alt="Linguista" />
 				</div>
 				<div className="nav-right">
 					<h4>Hi User</h4>
