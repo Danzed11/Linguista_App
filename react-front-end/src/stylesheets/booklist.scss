@@ -1,20 +1,17 @@
 @import '_variables';
 
 .libraryContainer-dashboard {
-	background-color: $primaryCol;
+	// background-color: purple;
 	top: 50px;
 	position: relative;
-	flex: 2;
+	flex: 1;
 	padding: 20px;
 	margin-right: 20px;
 	@include dash-container;
 }
 .library-page {
-	top: 70px;
 	position: relative;
 	height: 50vh;
 	list-style: none;
 	@include page-container;
-	@include backgroundimg;
-	// opacity: 0.3;
 }

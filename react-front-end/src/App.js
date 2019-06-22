@@ -6,10 +6,11 @@ import FileList from './file_list.js';
 import './stylesheets/App.css';
 
 import Nav from './components/nav.js';
+// import Landing from './root';
 import Dashboard from './dashboard.js';
 import Booklist from './bookList.js';
 import Wordlist from './wordList.js';
-import Study from './study.js'
+import Study from './study.js';
 
 // import Dropzone from './components/dropZone.js';
 // import Flashcard from './components/flashcard.js';
@@ -38,11 +39,12 @@ class App extends Component {
 	render() {
 		return (
 			<BrowserRouter>
-				<Route path='/' component={Nav} />
-				<Route path='/dashboard' component={Dashboard} />
-				<Route path='/library' component={Booklist} />
-				<Route path='/wordlist' component={Wordlist} />
-				<Route path='/study' component={Study} />
+				<Route path="/" component={Nav} />
+				{/* <Route path="/" component={Landing} /> */}
+				<Route path="/dashboard" component={Dashboard} />
+				<Route path="/library" component={Booklist} />
+				<Route path="/wordlist" component={Wordlist} />
+				<Route path="/study" component={Study} />
 			</BrowserRouter>
 		);
 	}
