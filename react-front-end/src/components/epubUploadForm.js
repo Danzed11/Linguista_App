@@ -4,7 +4,7 @@ class UploadForm extends Component {
   render() {
     return (
     <form id        =  "uploadForm"
-         enctype   =  "multipart/form-data"
+         encType   =  "multipart/form-data"
          action    =  "/upload"
          method    =  "post"
     >

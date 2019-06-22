@@ -39,14 +39,18 @@ App.post('/upload', (req, res) => {
     if(err) {
         return res.end("Error uploading file.");
     }
-    let output;
-    extract(epubFullPath,
-      (err, txt, n) => {
-        console.log(txt)
-      },
-      function() {
-        res.redirect('/library')
-      })
+    let output = ""
+    extract(epubFullPath, (err, txt, done) => {
+      output = output + txt
+      if (done) {
+        res.json(output)
+      }
+    })
+      // ,
+      // function() {
+      //   res.redirect('/library')
+      // }
+
 
   });
 })
@@ -68,52 +72,39 @@ const htmlParser = require('node-html-parser');
 const epubFullPath = './uploads/epub'
 
 
-//https://github.com/Projet-TAMIS/epub-to-text/blob/master/index.js Source
+// https://github.com/Projet-TAMIS/epub-to-text/blob/master/index.js Source
 function extract(sourceFile, callback, initialCallback) {
-    var epub = new EPub(sourceFile);
-
-    // callback fired for each chapter (or they are written to disk)
+    let epub = new EPub(sourceFile);
+    let output = "";
     epub.on('end', function() {
-      epub.flow.forEach(function(chapter, sequence) {
-        epub.getChapter(chapter.id, function(err, html) {
-          var txt = '';
-          if (html) {
-            txt = htmlToText.fromString(html.toString(), {ignoreHref: true});
-          };
-          var meta = {};
-          meta.id = chapter.id;
-          meta.excerpt = txt.trim().slice(0, 250);
-          meta.size = txt.length
-          meta.sequence_number = sequence
-          if (chapter.title) {
-            meta.title = chapter.title
-          } else {
-            meta.title = getTitleFromHtml(html);
-          }
-          callback(err, txt, sequence, meta);
-        });
-      });
+      epub.flow
+        .map((chapter, index) => {
+          epub.getChapter(chapter.id, function(error, text){
+            callback({}, text, index === epub.flow.length - 1)
+          })
+        })
     });
-
-    // callback as soon as file is ready to give info on how many chapters will be processed
-    epub.on('end', function() {
-      if (initialCallback) {
-        initialCallback(null, epub.flow.length);
-      };
-    });
-
     epub.parse();
-  }
-
-function getTitleFromHtml(html) {
-    const root = htmlParser.parse(html);
-    var title = root.querySelector('h1');
-    if (title == null) {
-      title = root.querySelector('title');
-      if (title == null) {
-        return '';
-      };
-    };
-    return title.structuredText.replace("\n", " ");
 }
+//Need to concatonate text in get chapter to an output variable to pass into the callback.
+//Seems to be a race condition in line 81/ may be getting a chapter before finishing.
 
+
+// function extract(sourceFile, callback, initialCallback) {
+//     let epub = new EPub(sourceFile);
+//     let output = "";
+//     let progressCount = 0;
+//     epub.on('end', function() {
+//       epub.flow
+//         .map((chapter, index) => {
+//           epub.getChapter(chapter.id, function(error, text){
+//             console.log(text);
+//             output = output + text
+//             progressCount++
+//           })
+//         })
+//       console.log(`Output: ${output}`)
+//       if (progressCount === epub.flow.length) {callback({}, output)}
+//     });
+//     epub.parse();
+// }
