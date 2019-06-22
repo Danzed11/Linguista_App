@@ -1,21 +1,31 @@
-// @import '_variables';
+@import '_variables';
 
 nav {
-	background-color: black;
-	color: aliceblue;
+	background-color: $navCol;
+	color: $primaryCol;
 	position: fixed;
+	height: 70px;
 	width: 100vw;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+	align-content: center;
 	top: 0;
 	left: 0;
+	z-index: 999;
+}
+.logo {
+	padding-top: 8px;
+	height: 60px;
 }
 
 .nav-left {
 	justify-self: flex-start;
 	padding: 0 20px;
 	align-self: center;
+	// font-family: 'Italianno', cursive;
+	// font-family: 'Niconne', cursive;
+	font-family: 'Qwigley', cursive;
 }
 .nav-right {
 	justify-self: flex-end;
