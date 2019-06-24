@@ -5,9 +5,9 @@
 }
 @mixin page-container {
 	display: flex;
+	position: relative;
 	justify-content: center;
 	align-items: center;
-	position: relative;
 	top: 60px;
 	z-index: 3;
 	height: 100vh;

@@ -1,12 +1,11 @@
 import React, { Component } from 'react';
 import { BrowserRouter, Route } from 'react-router-dom';
 import axios from 'axios';
-import DragAndDrop from './drag_and_drop.js';
-import FileList from './file_list.js';
+// import DragAndDrop from './drag_and_drop.js';
+// import FileList from './file_list.js';
 import './stylesheets/App.css';
 
 import Nav from './components/nav.js';
-// import Landing from './root';
 import Dashboard from './dashboard.js';
 import Booklist from './bookList.js';
 import Wordlist from './wordList.js';
@@ -40,7 +39,6 @@ class App extends Component {
 		return (
 			<BrowserRouter>
 				<Route path="/" component={Nav} />
-				{/* <Route path="/" component={Landing} /> */}
 				<Route path="/dashboard" component={Dashboard} />
 				<Route path="/library" component={Booklist} />
 				<Route path="/wordlist" component={Wordlist} />
