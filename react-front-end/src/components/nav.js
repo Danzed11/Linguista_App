@@ -4,6 +4,7 @@ import '../stylesheets/nav.css';
 class Nav extends Component {
 	render() {
 		return (
+			<body>
 			<nav>
 				<div className="nav-left">
 					{/* <h1>Linguista</h1> */}
@@ -17,6 +18,8 @@ class Nav extends Component {
 					<h4>Hi User</h4>
 				</div>
 			</nav>
+			<div></div>
+			</body>
 		);
 	}
 }
