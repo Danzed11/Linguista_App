@@ -1,6 +1,8 @@
 nav {
-  background-color: red;
+  background-color: #13292a;
+  color: #b5dfd6;
   position: fixed;
+  height: 70px;
   width: 100vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12,7 +14,16 @@ nav {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-top: 0;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+
+.logo {
+  padding-top: 8px;
+  height: 60px;
 }
 
 .nav-left {
@@ -21,6 +32,7 @@ nav {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
+  font-family: 'Qwigley', cursive;
 }
 
 .nav-right {

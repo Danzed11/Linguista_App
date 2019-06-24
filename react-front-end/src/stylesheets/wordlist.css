@@ -1,4 +1,27 @@
-.wordlistContainer {
+.wordlistContainer-dashboard {
+  position: relative;
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  padding: 20px;
+  margin-left: 20px;
+  border: #13292a solid 1px;
+  border-radius: 12px;
+  -webkit-box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
+          box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
+}
+
+.wordlist-page {
   background-color: blue;
+  position: relative;
+  top: 60px;
+  height: 50vh;
+}
+
+.wordlist-page .word {
+  border: #13292a solid 1px;
+  border-radius: 12px;
+  -webkit-box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
+          box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
 }
 /*# sourceMappingURL=wordlist.css.map */

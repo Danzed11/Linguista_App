@@ -1,3 +1,19 @@
-.wordlistContainer {
-  background-color: blue;
+@import '_variables';
+
+.wordlistContainer-dashboard {
+	// background-color: blue;
+	position: relative;
+	flex: 2;
+	padding: 20px;
+	margin-left: 20px;
+	@include dash-container;
+}
+.wordlist-page {
+	background-color: blue;
+	position: relative;
+	top: 60px;
+	height: 50vh;
+	.word {
+		@include dash-container;
+	}
 }

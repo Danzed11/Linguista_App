@@ -1,4 +1,22 @@
 .dropZone {
-  background-color: yellow;
+  background-color: #91cabe;
+  position: relative;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  padding: 20px;
+  margin-right: 20px;
+  border: #13292a solid 1px;
+  border-radius: 12px;
+  -webkit-box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
+          box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
+}
+
+#dropcontainer {
+  background-color: #91cabe;
+  border: #13292a solid 1px;
+  border-radius: 12px;
+  -webkit-box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
+          box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
 }
 /*# sourceMappingURL=dropzone.css.map */
