@@ -1,7 +1,8 @@
-DROP TABLE IF EXISTS library CASCADE;
-DROP TABLE IF EXISTS wordlist CASCADE;
+DROP TABLE IF EXISTS Library CASCADE;
+DROP TABLE IF EXISTS Wordlist CASCADE;
+DROP TABLE IF EXISTS Bookwords CASCADE;
 
-CREATE TABLE library(
+CREATE TABLE Library(
   id SERIAL PRIMARY KEY,
   title VARCHAR(100),
   book text NOT NULL,
@@ -9,7 +10,14 @@ CREATE TABLE library(
   bookmark int
 );
 
-CREATE TABLE wordlist(
+CREATE TABLE Bookwords(
+  id SERIAL PRIMARY KEY,
+  word text,
+  isWord boolean,
+  sequenceId int
+);
+
+CREATE TABLE Wordlist(
   id SERIAL PRIMARY KEY,
   foreign_word VARCHAR(100) NOT NULL,
   english_word VARCHAR(100) NOT NULL,

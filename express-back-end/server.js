@@ -23,6 +23,7 @@ const upload = multer({ storage : storage}).single('uploadedEpub');
 App.use(BodyParser.urlencoded({ extended: false }));
 App.use(Express.static('public'));
 
+
 // Sample GET route
 App.get('/api/data', (req, res) => res.json({
   message: "Seems to work!",
@@ -30,6 +31,12 @@ App.get('/api/data', (req, res) => res.json({
 
 App.get('/words/data', (req, res) => {
   knex('wordlist').asCallback((err,result) => {
+    res.json(result);
+  });
+});
+
+App.get('/testbook/data', (req, res) => {
+  knex('bookwords').asCallback((err,result) => {
     res.json(result);
   });
 });
@@ -86,25 +93,7 @@ function extract(sourceFile, callback, initialCallback) {
     });
     epub.parse();
 }
-//Need to concatonate text in get chapter to an output variable to pass into the callback.
-//Seems to be a race condition in line 81/ may be getting a chapter before finishing.
 
 
-// function extract(sourceFile, callback, initialCallback) {
-//     let epub = new EPub(sourceFile);
-//     let output = "";
-//     let progressCount = 0;
-//     epub.on('end', function() {
-//       epub.flow
-//         .map((chapter, index) => {
-//           epub.getChapter(chapter.id, function(error, text){
-//             console.log(text);
-//             output = output + text
-//             progressCount++
-//           })
-//         })
-//       console.log(`Output: ${output}`)
-//       if (progressCount === epub.flow.length) {callback({}, output)}
-//     });
-//     epub.parse();
-// }
+//===============Book Add ===============
+

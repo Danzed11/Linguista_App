@@ -6,7 +6,6 @@ import UploadForm from './components/epubUploadForm.js'
 class Booklist extends Component {
 	render() {
 		return (
-<<<<<<< HEAD
 			<div className="library-page">
 				<FileList />
 				<h1>This is the booklist</h1>
