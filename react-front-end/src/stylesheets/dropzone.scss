@@ -1,18 +1,32 @@
 @import '_variables';
 
 .dropZone {
-	background-color: $tertiaryCol;
-	position: relative;
 	flex: 1;
-	padding: 20px;
+	overflow: hidden;
 	margin-right: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 1;
+	position: relative;
 	@include dash-container;
 }
-
+.container {
+	height: 100%;
+	width: 100%;
+	position: relative;
+	padding: 20px;
+	z-index: 4;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.overlay {
+	@include overlaySetting;
+}
 #dropcontainer {
 	background-color: $tertiaryCol;
 	@include dash-container;
 	// @include page-container;
 	position: relative;
-	
 }
