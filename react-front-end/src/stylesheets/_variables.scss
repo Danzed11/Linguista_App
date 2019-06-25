@@ -3,6 +3,8 @@
 	border-radius: 12px;
 	box-shadow: $shadow;
 	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 @mixin page-container {
 	display: flex;

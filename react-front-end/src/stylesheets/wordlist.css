@@ -12,7 +12,13 @@
   -webkit-box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
           box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
   display: flex;
-  top: 50px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 35px;
   font-family: 'Alice';
   height: 42vh;
   overflow: hidden;
@@ -50,6 +56,12 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .wordlist-page {
@@ -67,5 +79,11 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=wordlist.css.map */
