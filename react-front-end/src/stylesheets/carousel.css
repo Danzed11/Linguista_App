@@ -107,6 +107,7 @@
 
 .BrainhubCarousel {
   width: 60vw;
+  top: -20px;
 }
 
 .BrainhubCarouselItem {

@@ -8,21 +8,30 @@ class LibraryCarousel extends Component {
 		return (
 			<div className="carousel">
 				<Carousel arrows>
-					<img
-						src="https://images-na.ssl-images-amazon.com/images/I/51Pab2aMLHL.jpg"
-						height="350px"
-						alt="Harry Potter"
-					/>
-					<img
-						src="https://images-na.ssl-images-amazon.com/images/I/41eXaoJCaUL.jpg"
-						height="350px"
-						alt="Coraline"
-					/>
-					<img
-						src="https://images-na.ssl-images-amazon.com/images/I/41PO1V8EHcL.jpg"
-						height="350px"
-						alt="Game Of Throness"
-					/>
+					<div>
+						<h1>Harry Potter et la Coupe De Feu</h1>
+						<img
+							src="https://images-na.ssl-images-amazon.com/images/I/51Pab2aMLHL.jpg"
+							height="300px"
+							alt="Harry Potter"
+						/>
+					</div>
+					<div>
+						<h1>Coaline</h1>
+						<img
+							src="https://images-na.ssl-images-amazon.com/images/I/41eXaoJCaUL.jpg"
+							height="300px"
+							alt="Coraline"
+						/>
+					</div>
+					<div>
+						<h1>Game of Thrones</h1>
+						<img
+							src="https://images-na.ssl-images-amazon.com/images/I/41PO1V8EHcL.jpg"
+							height="300px"
+							alt="Game Of Throness"
+						/>
+					</div>
 				</Carousel>
 				<div className="overlay" />
 			</div>
