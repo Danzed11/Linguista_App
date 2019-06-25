@@ -2,6 +2,7 @@
 	border: $navCol solid 1px;
 	border-radius: 12px;
 	box-shadow: $shadow;
+	display: flex;
 }
 @mixin page-container {
 	display: flex;
