@@ -17,11 +17,11 @@ class Dashboard extends Component {
 				
 				<div className="dash-row">
 					<DashboardLibrary />
-					<Flashcard />
+					<DashboardWordlist />
 				</div>
 				<div className="dash-row">
 					<Dropzone />
-					<DashboardWordlist />
+					<Flashcard />
 				</div>
 			</div>
 			</fragment>
