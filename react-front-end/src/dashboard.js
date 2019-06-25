@@ -11,8 +11,10 @@ import Flashcard from './components/flashcard.js';
 class Dashboard extends Component {
 	render() {
 		return (
+			<fragment>
+			<Nav/>
 			<div className="App">
-				<Nav />
+				
 				<div className="dash-row">
 					<DashboardLibrary />
 					<Flashcard />
@@ -22,6 +24,7 @@ class Dashboard extends Component {
 					<DashboardWordlist />
 				</div>
 			</div>
+			</fragment>
 		);
 	}
 }

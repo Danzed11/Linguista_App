@@ -1,0 +1,19 @@
+.homepage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80vh;
+  position: relative;
+  
+  background-image: url("../images/iStock-514230814.jpg");
+  opacity: 0.5;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+}

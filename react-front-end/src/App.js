@@ -5,6 +5,8 @@ import DragAndDrop from './drag_and_drop.js';
 import FileList from './file_list.js';
 import './stylesheets/App.css';
 
+import Home from './components/home.js';
+
 import Nav from './components/nav.js';
 import Dashboard from './dashboard.js';
 import Booklist from './bookList.js';
@@ -40,7 +42,8 @@ class App extends Component {
 	render() {
 		return (
 			<BrowserRouter>
-				<Route path='/' component={Nav} />
+				<Route path='/' exact component={Home} />
+
 				<Route path='/dashboard' component={Dashboard} />
 				<Route path='/library' component={Booklist} />
 				<Route path='/wordlist' component={Wordlist} />

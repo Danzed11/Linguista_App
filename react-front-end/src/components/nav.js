@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../stylesheets/nav.css';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";import '../stylesheets/nav.css';
 class Nav extends Component {
 	render() {
 		return (
@@ -16,9 +16,9 @@ class Nav extends Component {
 						<button className="dropbtn">Menu <span id="droparrow">⌄</span>
 							</button>
 						<div className="dropdown-content">
-							<a href="/dashboard">Dashboard</a>
-							<a href="/study">Flashcards</a>
-							<a href="/library">Book List</a>
+							<Link to ="/dashboard">Dashboard</Link>
+							<Link to ="/study">Flashcards</Link>
+							<Link to ="/library">Book List</Link>
 						</div>
 					</div>
 				</div>
