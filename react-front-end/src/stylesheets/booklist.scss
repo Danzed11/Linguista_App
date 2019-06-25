@@ -19,12 +19,7 @@
 		overflow: hidden;
 	}
 	.overlay {
-		opacity: 0.4;
-		position: absolute;
-		z-index: 0;
-		background-color: $tertiaryCol;
-		height: 100%;
-		width: 100%;
+		@include overlaySetting;
 	}
 }
 .library-page {

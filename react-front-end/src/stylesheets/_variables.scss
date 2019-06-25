@@ -23,6 +23,14 @@
 	width: 100vw;
 	overflow: hidden;
 }
+@mixin overlaySetting {
+	opacity: 0.5;
+	position: absolute;
+	z-index: 0;
+	background-color: $tertiaryCol;
+	height: 100%;
+	width: 100%;
+}
 
 // Placeholder to be rewritten with actual color pallet choices
 $primaryCol: #b5dfd6;

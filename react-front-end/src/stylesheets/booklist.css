@@ -30,7 +30,7 @@
 }
 
 .libraryContainer-dashboard .overlay {
-  opacity: 0.4;
+  opacity: 0.5;
   position: absolute;
   z-index: 0;
   background-color: #91cabe;
