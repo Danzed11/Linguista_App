@@ -10,6 +10,9 @@
   border-radius: 12px;
   -webkit-box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
           box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .flashcard-game {
