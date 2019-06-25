@@ -4,6 +4,8 @@ body {
 	padding: 0px;
 	margin: 0px;
 	height: 100vh;
+	z-index: 0;
+	@include backgroundimg;
 }
 .App {
 	text-align: center;
@@ -13,7 +15,6 @@ body {
 	width: 100vw;
 	justify-content: space-around;
 	flex-flow: column nowrap;
-	@include backgroundimg;
 }
 #overlay {
 	bottom: 0;
@@ -22,7 +23,7 @@ body {
 	background-color: #b5dfd6;
 	overflow: hidden;
 	z-index: 0;
-	// opacity: 0.5;
+	opacity: 0.5;
 }
 
 .dash-row {

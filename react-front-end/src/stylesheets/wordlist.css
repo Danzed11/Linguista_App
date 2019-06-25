@@ -1,14 +1,55 @@
 .wordlistContainer-dashboard {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   position: relative;
-  -webkit-box-flex: 2;
-      -ms-flex: 2;
-          flex: 2;
-  padding: 20px;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   margin-left: 20px;
   border: #13292a solid 1px;
   border-radius: 12px;
   -webkit-box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
           box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
+  display: flex;
+  top: 50px;
+  font-family: 'Alice';
+  height: 42vh;
+  overflow: hidden;
+}
+
+.wordlistContainer-dashboard .content-container {
+  padding: 20px;
+  opacity: 1;
+  z-index: 2;
+  height: 95%;
+  width: 100%;
+  position: relative;
+  overflow: auto;
+}
+
+.wordlistContainer-dashboard .content-container h1 {
+  text-align: center;
+}
+
+.wordlistContainer-dashboard .content-container p {
+  text-align: start;
+}
+
+.wordlistContainer-dashboard .overlay {
+  opacity: 0.7;
+  position: absolute;
+  z-index: 0;
+  background-color: #91cabe;
+  height: 100%;
+  width: 100%;
+  border: #13292a solid 1px;
+  border-radius: 12px;
+  -webkit-box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
+          box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .wordlist-page {
@@ -23,5 +64,8 @@
   border-radius: 12px;
   -webkit-box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
           box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 /*# sourceMappingURL=wordlist.css.map */

@@ -15,11 +15,11 @@ class Dashboard extends Component {
 				<Nav />
 				<div className="dash-row">
 					<DashboardLibrary />
-					<Flashcard />
+					<DashboardWordlist />
 				</div>
 				<div className="dash-row">
 					<Dropzone />
-					<DashboardWordlist />
+					<Flashcard />
 				</div>
 			</div>
 		);

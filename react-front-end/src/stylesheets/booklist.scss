@@ -1,20 +1,30 @@
 @import '_variables';
 
 .libraryContainer-dashboard {
-	background-color: $primaryCol;
 	top: 50px;
+	display: flex;
 	position: relative;
+	height: 42vh;
 	flex: 2;
-	padding: 20px;
 	margin-right: 20px;
+	box-sizing: content-box;
+	overflow: hidden;
 	@include dash-container;
+	z-index: 0;
+	.carousel {
+		align-content: center;
+		position: relative;
+		padding: 20px;
+		z-index: 2;
+		overflow: hidden;
+	}
+	.overlay {
+		@include overlaySetting;
+	}
 }
 .library-page {
-	top: 70px;
 	position: relative;
 	height: 50vh;
 	list-style: none;
 	@include page-container;
-	@include backgroundimg;
-	// opacity: 0.3;
 }

@@ -2,6 +2,12 @@ body {
   padding: 0px;
   margin: 0px;
   height: 100vh;
+  z-index: 0;
+  background-image: url("../images/iStock-514230814.jpg");
+  z-index: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
 }
 
 .App {
@@ -18,11 +24,6 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
-  background-image: url("../images/iStock-514230814.jpg");
-  opacity: 0.5;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
 }
 
 #overlay {
@@ -32,6 +33,7 @@ body {
   background-color: #b5dfd6;
   overflow: hidden;
   z-index: 0;
+  opacity: 0.5;
 }
 
 .dash-row {

@@ -12,7 +12,6 @@ class Nav extends Component {
 						src="https://github.com/Danzed11/Linguista_App/blob/master/react-front-end/public/logo/logoLG-Col.png?raw=true"
 						alt="Linguista"
 					/>
-				</div>
 					<div className="dropdown">
 						<button className="dropbtn">Menu <span id="droparrow">⌄</span>
 							</button>
@@ -22,6 +21,7 @@ class Nav extends Component {
 							<a href="/library">Book List</a>
 						</div>
 					</div>
+				</div>
 				<div className="nav-right">
 					<h4>Hi User</h4>
 				</div>
