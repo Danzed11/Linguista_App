@@ -9,6 +9,8 @@
   align-items: center;
   height: 42vh;
   z-index: 5;
+  width: 60vw;
+  top: -30px;
 }
 
 .BrainhubCarousel .BrainhubCarousel__trackContainer {
@@ -103,11 +105,7 @@
 
 .BrainhubCarousel__arrows {
   background-color: #499fa466;
-}
-
-.BrainhubCarousel {
-  width: 60vw;
-  top: -20px;
+  border-radius: 20px;
 }
 
 .BrainhubCarouselItem {

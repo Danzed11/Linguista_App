@@ -7,7 +7,7 @@ class LibraryCarousel extends Component {
 	render() {
 		return (
 			<div className="carousel">
-				<Carousel arrows>
+				<Carousel arrows infinite>
 					<div>
 						<h1>Harry Potter et la Coupe De Feu</h1>
 						<img
@@ -17,7 +17,7 @@ class LibraryCarousel extends Component {
 						/>
 					</div>
 					<div>
-						<h1>Coaline</h1>
+						<h1>Coraline</h1>
 						<img
 							src="https://images-na.ssl-images-amazon.com/images/I/41eXaoJCaUL.jpg"
 							height="300px"
@@ -33,7 +33,6 @@ class LibraryCarousel extends Component {
 						/>
 					</div>
 				</Carousel>
-				<div className="overlay" />
 			</div>
 		);
 	}

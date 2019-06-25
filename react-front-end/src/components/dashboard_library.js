@@ -6,6 +6,7 @@ class DashboardLibrary extends Component {
 	render() {
 		return (
 			<div className="libraryContainer-dashboard">
+				<div className="overlay" />
 				<LibraryCarousel />
 			</div>
 		);
