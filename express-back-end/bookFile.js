@@ -107,7 +107,8 @@ Perched, and sat, and nothing more.`
 // And my soul from out that shadow that lies floating on the floor
 // Shall be lifted—nevermore!`
 
-bookArray = bookString.split(" ");
+
+bookArray = bookString.replace(/\r?\n|\r/g , " \n ").split(" ");
 let output = [];
 bookArray.forEach((element, index) => {
   output.push({
@@ -116,5 +117,6 @@ bookArray.forEach((element, index) => {
     sequenceID: index
   })
 });
-ExportObj = {output};
-module.export = ExportObj;
+console.dir(output);
+// ExportObj = {output};
+// module.export = ExportObj;
