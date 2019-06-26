@@ -42,20 +42,12 @@ class App extends Component {
 	render() {
 		return (
 			<BrowserRouter>
-<<<<<<< HEAD
 				<Route path='/' exact component={Home} />
 
 				<Route path='/dashboard' component={Dashboard} />
 				<Route path='/library' component={Booklist} />
 				<Route path='/wordlist' component={Wordlist} />
 				<Route path='/study' component={Study} />
-=======
-				<Route path="/" component={Nav} />
-				<Route path="/dashboard" component={Dashboard} />
-				<Route path="/library" component={Booklist} />
-				<Route path="/wordlist" component={Wordlist} />
-				<Route path="/study" component={Study} />
->>>>>>> master
 			</BrowserRouter>
 		);
 	}

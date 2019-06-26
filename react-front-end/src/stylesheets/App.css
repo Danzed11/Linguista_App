@@ -2,17 +2,12 @@ body {
   padding: 0px;
   margin: 0px;
   height: 100vh;
-<<<<<<< HEAD
-  background-image: url("../images/iStock-514230814.jpg");
-  
-=======
   z-index: 0;
   background-image: url("../images/iStock-514230814.jpg");
   z-index: -1;
   height: 100vh;
   width: 100vw;
   overflow: hidden;
->>>>>>> master
 }
 
 .App {
@@ -24,20 +19,11 @@ body {
   height: 100vh;
   width: 100vw;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+      justify-content: space-around;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-<<<<<<< HEAD
-  -ms-flex-flow: column nowrap;
-  flex-flow: column nowrap;
-  /* opacity: 0.5; */
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-=======
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
->>>>>>> master
 }
 
 #overlay {

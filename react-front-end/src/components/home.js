@@ -3,12 +3,22 @@ import '../stylesheets/home.css';
 class Home extends Component {
   render() {
      
-      return (
+    return (
+      <body>
         <div className="homepage">
-          <h2> LINGUISTA </h2>
-          
+          <div className="content-container">
+            <div className="homelogo">
+              <img src={require("../images/linguista-large-logobop.png")} alt=""/>
+            </div>
+              <div className="btn-con">
+                <button>Login</button>
+                <button>Register</button>
+              </div>
+              <div className="overlay"></div>
+             </div>       
         </div>
-        )
+      </body>
+      )
     }
 
 }
