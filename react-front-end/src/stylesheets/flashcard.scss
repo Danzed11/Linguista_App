@@ -21,3 +21,14 @@
 .flashcard-game {
 	@include page-container;
 }
+.game-container {
+	@include dash-container;
+	height: 70vh;
+	width: 80vw;
+	overflow: hidden;
+	z-index: 4;
+	position: relative;
+}
+.overlay {
+	@include overlaySetting;
+}

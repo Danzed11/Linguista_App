@@ -40,4 +40,34 @@
   z-index: 3;
   height: 100vh;
 }
+
+.game-container {
+  border: #13292a solid 1px;
+  border-radius: 12px;
+  -webkit-box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
+          box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70vh;
+  width: 80vw;
+  overflow: hidden;
+  z-index: 4;
+  position: relative;
+}
+
+.overlay {
+  opacity: 0.5;
+  position: absolute;
+  z-index: -1;
+  background-color: #91cabe;
+  height: 100%;
+  width: 100%;
+}
 /*# sourceMappingURL=flashcard.css.map */
