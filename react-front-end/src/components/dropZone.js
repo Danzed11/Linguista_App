@@ -5,7 +5,10 @@ class DropZone extends Component {
 	render() {
 		return (
 			<div className="dropZone">
-				<h4>This is the Drag and Drop</h4>
+				<div className="container">
+					<div className="overlay" />
+					<h1>upload your books here</h1>
+				</div>
 			</div>
 		);
 	}
