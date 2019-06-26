@@ -25,18 +25,17 @@ App.use(Express.static('public'));
 
 
 // Sample GET route
-App.get('/api/data', (req, res) => res.json({
-  message: "Seems to work!",
-}));
 
 App.get('/words/data', (req, res) => {
-  knex('wordlist').asCallback((err,result) => {
+  knex('studylist').asCallback((err,result) => {
     res.json(result);
   });
 });
 
 App.get('/testbook/data', (req, res) => {
-  knex('bookwords').asCallback((err,result) => {
+  knex('words')
+  .where({bookid: 6, chapter_ref: 4})
+  .asCallback((err,result) => {
     res.json(result);
   });
 });
@@ -67,35 +66,42 @@ App.post('/uploadtest', (req, res) => {
     if(err) {
         return res.end("Error uploading file.");
     }
-    let output = ""
-    //create a book entry in knex here, .then (extract)
-    extractProm(epubFullPath)
-    .then(({chapters, getChapter}) => {
-      return Promise.all(
-        chapters.map(getChapter)
-      )
+    knex('books').insert({
+      title: 'Simon vs The Homosapien Agenda '
     })
-    .then(chaptersTextArr => {
-      let output = [];
-      chaptersTextArr.forEach((element, chapterNumber) => {
-        bookArray = element.replace(/\r?\n|\r/g , " \n ").split(" ");
-        let wordSegmented = [];
-        bookArray.forEach((el, index) => {
-          wordSegmented.push({
-            word: el,
-            chapter: chapterNumber,
-            sequenceID: index
-          })
-        });
-        output.push(wordSegmented);
-        //knex insert wordSegmented batch, with the id passed from the prior knex input.
-
+    .returning('id')
+    .then(function(bookId){
+      extractProm(epubFullPath)
+      .then(({chapters, getChapter}) => {
+        return Promise.all(
+          chapters.map(getChapter)
+        )
       })
-      res.status(204).send()
+      .then(chaptersTextArr => {
+        let output = [];
+        chaptersTextArr.forEach((element, chapterNumber) => {
+          bookArray = element.replace(/\r?\n|\r/g , " \n ").split(" ");
+          let wordSegmented = [];
+          bookArray.forEach((el, index) => {
+            wordSegmented.push({
+              word: el,
+              bookid: bookId[0],
+              chapter_ref: chapterNumber,
+              sequence_ref: index
+            })
+          });
+          knex('words').insert(wordSegmented).asCallback()
+          output.push(wordSegmented);
+
+        })
+        // res.json(output)
+        res.status(204).send()
+      })
+      .catch(err => {
+        console.log(`Error: ${err}`)
+      })
     })
-    .catch(err => {
-      console.log(`Error: ${err}`)
-    })
+    //create a book entry in knex here, .then (extract)
   // .replace(/[a-z]/ig, function(word) {})
 
   });

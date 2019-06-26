@@ -34,13 +34,16 @@ class Reader extends Component {
   render() {
     if (this.state.loading) {
       return (<div>Wordlist Loading...</div>);
+    } else if (this.state.words == "") {
+      return (<div>No response from database.</div>)
     } else {
       return (
         <div className="chapter-div">
           {this.state.words.map((word, index) => {
-            return <Word key={index} foreign={word.word}/>
+            return <Word keyprop={index} foreign={word.word}/>
           })
           }
+          {/*{this.state.words}*/}
         </div>
           )
     }
