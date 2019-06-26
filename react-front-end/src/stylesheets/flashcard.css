@@ -1,5 +1,5 @@
 .flashcardContainer {
-  background-color: #499fa4;
+  background: radial-gradient(ellipse at center, rgba(147, 206, 222, 0.38) 0%, rgba(143, 204, 219, 0.38) 37%, #499fa4 100%);
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
@@ -19,6 +19,10 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.flashcardContainer:hover {
+  background-color: #499fa487;
 }
 
 .flashcard-game {
