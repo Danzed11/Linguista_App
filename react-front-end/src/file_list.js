@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import DragAndDrop from './drag_and_drop.js'
+//========Some Greg test code Uses Axios to send ePub to server
+import axios, { post } from 'axios';
+//========================================================
+
 
 class FileList extends Component {
 
@@ -15,9 +19,10 @@ class FileList extends Component {
   //   // Read a file and call an Anvil method.
   //   reader.onloadend = function() {
   //     anvil.call(files.target, "drag_drop_upload", file.type, reader.result, file.name);
-  //   }        
+  //   }
   //   reader.readAsBinaryString(file);
   // }
+
 
   handleDrop = (files) => {
     let reader = new FileReader();
@@ -27,11 +32,11 @@ class FileList extends Component {
         // Attempt to use the file
         // let file = files.dataTransfer.items[i].getAsFile()
         // getFileContents(files, reader, file)
-      fileList.push(files[i].name)
-    } else {
-      console.log("Not a picture")
+        fileList.push(files[i].name)
+      } else {
+        console.log("Not a picture")
+      }
     }
-  }
     this.setState({files: fileList})
   }
 
