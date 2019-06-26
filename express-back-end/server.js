@@ -68,6 +68,7 @@ App.post('/uploadtest', (req, res) => {
         return res.end("Error uploading file.");
     }
     let output = ""
+    //create a book entry in knex here, .then (extract)
     extractProm(epubFullPath)
     .then(({chapters, getChapter}) => {
       return Promise.all(
@@ -87,17 +88,15 @@ App.post('/uploadtest', (req, res) => {
           })
         });
         output.push(wordSegmented);
+        //knex insert wordSegmented batch, with the id passed from the prior knex input.
+
       })
-      res.json(output)
+      res.status(204).send()
     })
     .catch(err => {
       console.log(`Error: ${err}`)
     })
-      // ,
-      // function() {
-      //   res.redirect('/library')
-      // }
-
+  // .replace(/[a-z]/ig, function(word) {})
 
   });
 })
