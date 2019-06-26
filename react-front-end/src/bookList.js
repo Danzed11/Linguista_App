@@ -9,7 +9,7 @@ class Booklist extends Component {
 			<div className="library-page">
 				<FileList />
 				<h1>This is the booklist</h1>
-        <UploadForm />
+        <UploadForm/>
 
 			</div>
 		);

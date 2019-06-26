@@ -48,7 +48,6 @@ class App extends Component {
 				<Route path='/wordlist' component={Wordlist} />
 				<Route path='/study' component={Study} />
 				<Route path='/reader' component={Reader} />
-
 			</BrowserRouter>
 		);
 	}

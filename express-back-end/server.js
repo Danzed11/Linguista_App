@@ -62,6 +62,46 @@ App.post('/upload', (req, res) => {
   });
 })
 
+App.post('/uploadtest', (req, res) => {
+  upload(req,res,function(err) {
+    if(err) {
+        return res.end("Error uploading file.");
+    }
+    let output = ""
+    extractProm(epubFullPath)
+    .then(({chapters, getChapter}) => {
+      return Promise.all(
+        chapters.map(getChapter)
+      )
+    })
+    .then(chaptersTextArr => {
+      let output = [];
+      chaptersTextArr.forEach((element, chapterNumber) => {
+        bookArray = element.replace(/\r?\n|\r/g , " \n ").split(" ");
+        let wordSegmented = [];
+        bookArray.forEach((el, index) => {
+          wordSegmented.push({
+            word: el,
+            chapter: chapterNumber,
+            sequenceID: index
+          })
+        });
+        output.push(wordSegmented);
+      })
+      res.json(output)
+    })
+    .catch(err => {
+      console.log(`Error: ${err}`)
+    })
+      // ,
+      // function() {
+      //   res.redirect('/library')
+      // }
+
+
+  });
+})
+
 //Set up POST route to update word interval number via flashcard game.
 
 App.listen(PORT, () => {
@@ -94,6 +134,33 @@ function extract(sourceFile, callback, initialCallback) {
     epub.parse();
 }
 
+function getChapt(chapter) {
+  return new Promise((resolve, reject) => {
+    this.getChapter(chapter.id, function(error, text){
+      if (error) {
+        console.log(`getChapt error:`, error.stack)
+        return reject(error)}
+        output = htmlToText.fromString(text,{
+          preserveNewlines: true
+        })
+      resolve(output)
+    })
+  })
+}
 
-//===============Book Add ===============
+function extractProm(sourceFile) {
+  return new Promise((resolve, reject) => {
+    let epub = new EPub(sourceFile);
+    let output = "";
+    epub.on('end', () => {
+      resolve({ chapters: epub.flow, getChapter: getChapt.bind(epub) })
+    });
+
+    epub.on('error', function(err) {
+      console.log("extractPromErr", err.stack)
+      reject(err)
+    });
+    epub.parse();
+  })
+}
 
