@@ -66,7 +66,7 @@ class Study extends Component {
     }
     if (!this.state.showAnswer) {
       return (
-        <div className="App">
+        <div className="flashcard-game">
           <h1>Card: { this.state.displayCard.round }</h1>
           <h2>{ this.state.displayCard.foreign_word}</h2>
           <hr/>
@@ -76,7 +76,7 @@ class Study extends Component {
         </div>
       );
     } else {
-      return (<div className="App">
+      return (<div className="flashcard-game">
           <h1>Card: { this.state.displayCard.round }</h1>
           <h2>{ this.state.displayCard.foreign_word}</h2>
           <hr/>
