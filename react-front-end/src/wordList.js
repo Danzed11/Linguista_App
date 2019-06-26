@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Word from './components/word.js';
+import Study_word from './components/Study_word.js';
 
 import axios from 'axios';
 import './stylesheets/wordlist.css';
@@ -28,7 +28,7 @@ class Wordlist extends Component {
 			return (
 				<div className="wordllist-page">
 					{this.state.words.map(word => (
-						<Word foreign={word.foreign_word} english={word.english_word} />
+						<Study_word foreign={word.foreign_word} english={word.english_word} />
 					))}
 				</div>
 			);

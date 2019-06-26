@@ -38,7 +38,7 @@ class Reader extends Component {
       return (
         <div className="chapter-div">
           {this.state.words.map((word, index) => {
-            return <span className="wordtest" key={index} word={word.word} onClick={() => this.translationHandler(word.word)}>{word.word} </span>
+            return <Word key={index} foreign={word.word}/>
           })
           }
         </div>
