@@ -61,7 +61,7 @@ class Study extends Component {
 					<div className="game-container">
 						<div className="overlay" />
 						<div className="content">
-							<h2> Start Studying </h2>
+							<h1> Start Studying </h1>
 							<button onClick={this.startUp}>Begin</button>
 						</div>
 					</div>
