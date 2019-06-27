@@ -3,6 +3,8 @@ import axios from 'axios';
 import flashcard from './flashcard_helper';
 import './stylesheets/flashcard.css';
 import Nav from './components/nav.js';
+import Tabs from './tabs.jsx';
+import Wordlist from './wordList';
 
 //Component that houses flashcard game.
 
@@ -58,18 +60,26 @@ class Study extends Component {
 	render() {
 		if (this.state.startPage) {
 			return (
-				<fragment>
+				<div className="App">
 					<Nav />
-					<div className="flashcard-game">
-						<div className="game-container">
-							<div className="overlay" />
-							<div className="content">
-								<h2> Start Studying </h2>
-								<button onClick={this.startUp}>Begin</button>
+
+					<Tabs className="tabs">
+						<div label="Words">
+							<Wordlist />
+						</div>
+						<div label="Flashcards">
+							<div className="flashcard-game">
+								<div className="game-container">
+									<div className="overlay" />
+									<div className="content">
+										<h2> Start Studying </h2>
+										<button onClick={this.startUp}>Begin</button>
+									</div>
+								</div>
 							</div>
 						</div>
-					</div>
-				</fragment>
+					</Tabs>
+				</div>
 			);
 		}
 		if (!this.state.showAnswer) {

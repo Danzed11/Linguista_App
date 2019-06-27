@@ -27,7 +27,7 @@ class Wordlist extends Component {
 		} else {
 			return (
 				<div className="wordllist-page">
-					<div className="content-container">
+					<div className="contentContainer">
 						<table className="word">
 							<thead>
 								<tr>
@@ -43,7 +43,6 @@ class Wordlist extends Component {
 								/>
 							))}
 						</table>
-						<div className="overlay" />
 					</div>
 				</div>
 			);

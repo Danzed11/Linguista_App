@@ -6,9 +6,9 @@
 	flex: 1;
 	margin-left: 20px;
 	@include dash-container;
-	top: 35px;
+	top: 45px;
 	font-family: 'Alice';
-	height: 42vh;
+	height: 47vh;
 	overflow: hidden;
 
 	.content-container {
@@ -40,9 +40,11 @@
 .wordllist-page {
 	position: relative;
 	height: 50vh;
+	top: 0;
 	@include page-container;
-	.content-container {
+	.contentContainer {
 		position: relative;
+		background-color: #91cabe85;
 		@include dash-container;
 		z-index: 4;
 		height: 80vh;

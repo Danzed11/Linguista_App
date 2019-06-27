@@ -36,7 +36,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  top: 60px;
   z-index: 3;
   height: 100vh;
 }
@@ -55,8 +54,8 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 70vh;
-  width: 80vw;
+  height: 80vh;
+  width: 50vw;
   overflow: hidden;
   z-index: 4;
   position: relative;
@@ -69,5 +68,34 @@
   background-color: #91cabe;
   height: 100%;
   width: 100%;
+}
+
+.tab-list {
+  font-size: 1.5em;
+  background-clip: #499fa4;
+  padding-left: 0;
+}
+
+.tabs {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  top: 70px;
+  width: 100vw;
+}
+
+.tab-list-item {
+  display: inline-block;
+  list-style: none;
+  margin-bottom: -1px;
+  padding: 0.5rem 0.75rem;
+}
+
+.tab-list-active {
+  background-color: #b5dfd6;
+  border: solid #ccc;
+  border-radius: 12px 12px 0 0;
+  border-width: 1px 1px 0 1px;
 }
 /*# sourceMappingURL=flashcard.css.map */

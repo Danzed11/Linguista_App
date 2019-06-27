@@ -30,8 +30,11 @@ body {
 	display: flex;
 	flex-flow: row wrap;
 	justify-content: space-around;
-	height: 43%;
+	height: 50%;
 	padding: 20px;
+}
+.bottom {
+	height: 35%;
 }
 
 // .App-logo {

@@ -22,14 +22,16 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 80vw;
-  height: 80vh;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: 80vw;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
   position: relative;
   display: flex;
   -webkit-box-orient: vertical;

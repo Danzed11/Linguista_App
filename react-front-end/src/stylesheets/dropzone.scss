@@ -26,7 +26,6 @@
 #dropcontainer {
 	background-color: $tertiaryCol;
 	@include dash-container;
-	// @include page-container;
 	position: relative;
 }
 .upload {
