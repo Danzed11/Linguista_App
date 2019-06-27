@@ -12,7 +12,7 @@ class Word extends Component {
   }
 
   translationHandler(input) {
-    let url = `https://translation.googleapis.com/language/translate/v2?key=AIzaSyD0A7tw-SVBIHFZwEH12i2SS__8LviSfFE&q=${input}&target=fr`
+    let url = `https://translation.googleapis.com/language/translate/v2?key=AIzaSyD0A7tw-SVBIHFZwEH12i2SS__8LviSfFE&q=${input}&target=en`
     axios
       .get(url) // You can simply make your requests to "/api/whatever you want"
       .then(response => {
@@ -25,14 +25,14 @@ class Word extends Component {
   render() {
     if (this.state.translated) {
       return (
-        <div key={this.props.key} word={this.props.foreign}>
-          <div>{this.state.translation}</div>
-          <div>{this.props.foreign} </div>
+        <div key={this.props.keyprop} word={this.props.foreign} className="translated-pair">
+          <div className="translated-word">{this.state.translation} </div>
+          <div className="untranslated-word">{this.props.foreign} </div>
         </div>
       );
     } else {
       return (
-        <span className="wordtest" key={this.props.key} word={this.props.foreign} onClick={() => this.translationHandler(this.props.foreign)}>
+        <span className="wordtest" key={this.props.keyprop} word={this.props.foreign} onClick={() => this.translationHandler(this.props.foreign)}>
           {this.props.foreign} </span>
       );}
   }
