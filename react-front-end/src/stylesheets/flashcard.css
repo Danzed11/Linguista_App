@@ -74,6 +74,7 @@
   font-size: 1.5em;
   background-clip: #499fa4;
   padding-left: 0;
+  border-bottom: 1px solid #13292a;
 }
 
 .tabs {
@@ -90,11 +91,12 @@
   list-style: none;
   margin-bottom: -1px;
   padding: 0.5rem 0.75rem;
+  border-bottom: 1px solid #13292a;
 }
 
 .tab-list-active {
   background-color: #b5dfd6;
-  border: solid #ccc;
+  border: solid #13292a;
   border-radius: 12px 12px 0 0;
   border-width: 1px 1px 0 1px;
 }

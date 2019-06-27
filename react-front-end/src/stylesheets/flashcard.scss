@@ -37,6 +37,7 @@
 	font-size: 1.5em;
 	background-clip: $secondaryCol;
 	padding-left: 0;
+	border-bottom: 1px solid $navCol;
 }
 .tabs {
 	position: absolute;
@@ -49,10 +50,11 @@
 	list-style: none;
 	margin-bottom: -1px;
 	padding: 0.5rem 0.75rem;
+	border-bottom: 1px solid $navCol;
 }
 .tab-list-active {
 	background-color: $primaryCol;
-	border: solid #ccc;
+	border: solid $navCol;
 	border-radius: 12px 12px 0 0;
 	border-width: 1px 1px 0 1px;
 }
