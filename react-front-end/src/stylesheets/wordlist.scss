@@ -7,9 +7,13 @@
 	margin-left: 20px;
 	@include dash-container;
 	top: 35px;
-	font-family: 'Alice';
+	font-family: 'Source Sans Pro';
 	height: 42vh;
 	overflow: hidden;
+
+	.bold-words {
+		font-weight: bold;
+	}
 
 	.content-container {
 		padding: 20px;

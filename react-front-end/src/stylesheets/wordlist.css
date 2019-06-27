@@ -19,9 +19,13 @@
       -ms-flex-align: center;
           align-items: center;
   top: 35px;
-  font-family: 'Alice';
+  font-family: 'Source Sans Pro';
   height: 42vh;
   overflow: hidden;
+}
+
+.wordlistContainer-dashboard .bold-words {
+  font-weight: bold;
 }
 
 .wordlistContainer-dashboard .content-container {

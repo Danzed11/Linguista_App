@@ -8,7 +8,7 @@ class DropZone extends Component {
 			<div className="dropZone">
 				<div className="container">
 					<div className="overlay" />
-					<h2>Upload your books here!</h2>
+					<h1>Upload your books here</h1>
 					<div className="upload">
 						<UploadForm />
 					</div>
