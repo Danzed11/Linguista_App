@@ -64,14 +64,29 @@
           align-items: center;
 }
 
-.wordlist-page {
-  background-color: blue;
+.wordllist-page {
   position: relative;
-  top: 60px;
   height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 60px;
+  z-index: 3;
+  height: 100vh;
 }
 
-.wordlist-page .word {
+.wordllist-page .content-container {
+  position: relative;
+  z-index: 4;
+  height: 80vh;
+  width: 80vw;
   border: #13292a solid 1px;
   border-radius: 12px;
   -webkit-box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
@@ -85,5 +100,15 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow: hidden;
+}
+
+.wordllist-page .content {
+  position: relative;
+  padding: 20px;
+  opacity: 1;
+  z-index: 2;
+  position: relative;
+  overflow: auto;
 }
 /*# sourceMappingURL=wordlist.css.map */

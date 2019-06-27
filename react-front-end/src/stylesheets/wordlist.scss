@@ -36,12 +36,26 @@
 		@include dash-container;
 	}
 }
-.wordlist-page {
-	background-color: blue;
+.wordllist-page {
 	position: relative;
-	top: 60px;
 	height: 50vh;
-	.word {
+	@include page-container;
+	.content-container {
+		position: relative;
+		z-index: 4;
+		height: 80vh;
+		width: 80vw;
 		@include dash-container;
+		overflow: hidden;
+	}
+	.content {
+		position: relative;
+		padding: 20px;
+		opacity: 1;
+		z-index: 2;
+		// height: 95%;
+		// width: 100%;
+		position: relative;
+		overflow: auto;
 	}
 }

@@ -27,9 +27,24 @@ class Wordlist extends Component {
 		} else {
 			return (
 				<div className="wordllist-page">
-					{this.state.words.map(word => (
-						<Study_word foreign={word.foreign_word} english={word.english_word} />
-					))}
+					<div className="content-container">
+						<table className="word">
+							<tr>
+								<th>Foreign word</th>
+								<th>Translated word</th>
+								<th>Delete</th>
+							</tr>
+
+							{this.state.words.map(word => (
+								<Study_word
+									foreign={word.foreign_word}
+									english={word.english_word}
+								/>
+							))}
+						</table>
+
+						<div className="overlay" />
+					</div>
 				</div>
 			);
 		}
