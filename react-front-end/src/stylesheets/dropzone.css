@@ -7,12 +7,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   opacity: 1;
   position: relative;
   border: #13292a solid 1px;
@@ -20,6 +14,12 @@
   -webkit-box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
           box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .container {
@@ -37,6 +37,10 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .overlay {
@@ -57,6 +61,17 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
+}
+
+.upload {
+  text-align: start;
+  margin-left: 30%;
 }
 /*# sourceMappingURL=dropzone.css.map */

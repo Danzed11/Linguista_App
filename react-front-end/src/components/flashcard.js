@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
 import '../stylesheets/flashcard.css';
+import { Link } from 'react-router-dom';
 
 class Flashcard extends Component {
 	render() {
 		return (
-			<div className="flashcardContainer">
-				<h4>this is the flashcard box</h4>
-				<h1>{this.props.message}</h1>
-				<button onClick={this.fetchData}>Fetch Data</button>
-			</div>
+			<button className="button flashcardContainer">
+				<Link to="/study" style={{ textDecoration: 'none', color: '#13292a' }}>
+					<h1>Click here to study your words</h1>
+				</Link>
+			</button>
 		);
 	}
 }

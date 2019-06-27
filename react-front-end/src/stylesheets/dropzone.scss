@@ -5,8 +5,6 @@
 	overflow: hidden;
 	margin-right: 20px;
 	display: flex;
-	justify-content: center;
-	align-items: center;
 	opacity: 1;
 	position: relative;
 	@include dash-container;
@@ -20,6 +18,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-direction: column;
 }
 .overlay {
 	@include overlaySetting;
@@ -29,4 +28,8 @@
 	@include dash-container;
 	// @include page-container;
 	position: relative;
+}
+.upload {
+	text-align: start;
+	margin-left: 30%;
 }

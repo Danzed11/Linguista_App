@@ -6,7 +6,7 @@
 	flex: 1;
 	margin-left: 20px;
 	@include dash-container;
-	top: 50px;
+	top: 35px;
 	font-family: 'Alice';
 	height: 42vh;
 	overflow: hidden;
@@ -27,7 +27,8 @@
 		}
 	}
 	.overlay {
-		opacity: 0.7;
+		top: 0;
+		opacity: 0.5;
 		position: absolute;
 		z-index: 0;
 		background-color: $tertiaryCol;
@@ -36,12 +37,53 @@
 		@include dash-container;
 	}
 }
-.wordlist-page {
-	background-color: blue;
+.wordllist-page {
 	position: relative;
-	top: 60px;
 	height: 50vh;
-	.word {
+	@include page-container;
+	.content-container {
+		position: relative;
 		@include dash-container;
+		z-index: 4;
+		height: 80vh;
+		width: 50vw;
+		overflow: hidden;
+		padding: 0 20px;
+		align-items: stretch;
 	}
+	.word {
+		table-layout: fixed;
+		position: relative;
+		top: 20px;
+		opacity: 1;
+		z-index: 2;
+		overflow: auto;
+		width: 100%;
+		border-collapse: collapse;
+		thead {
+			border-bottom: 1px $secondaryCol double;
+			font-size: 1.5rem;
+		}
+		tr {
+			border-bottom: $secondaryCol solid 1px;
+			text-align: center;
+		}
+		tr:hover {
+			background-color: $primaryCol;
+		}
+	}
+}
+
+button.btn_del {
+	padding: 10px;
+	background: $secondaryCol;
+	color: $navCol;
+	border: $secondaryCol solid 1px;
+	border-radius: 12px;
+	box-shadow: $shadow;
+	font-size: 1rem;
+}
+.btn_del:hover {
+	border: $secondaryCol solid 1.5px;
+	background-color: rgba(143, 204, 219, 0.44);
 }

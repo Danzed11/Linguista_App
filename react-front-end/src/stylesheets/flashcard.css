@@ -1,5 +1,5 @@
 .flashcardContainer {
-  background-color: #499fa4;
+  background: radial-gradient(ellipse at center, rgba(147, 206, 222, 0.38) 0%, rgba(143, 204, 219, 0.38) 37%, #499fa4 100%);
   -webkit-box-flex: 2;
       -ms-flex: 2;
           flex: 2;
@@ -13,6 +13,16 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flashcardContainer:hover {
+  background-color: #499fa487;
 }
 
 .flashcard-game {
@@ -29,5 +39,35 @@
   top: 60px;
   z-index: 3;
   height: 100vh;
+}
+
+.game-container {
+  border: #13292a solid 1px;
+  border-radius: 12px;
+  -webkit-box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
+          box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 70vh;
+  width: 80vw;
+  overflow: hidden;
+  z-index: 4;
+  position: relative;
+}
+
+.overlay {
+  opacity: 0.5;
+  position: absolute;
+  z-index: -1;
+  background-color: #91cabe;
+  height: 100%;
+  width: 100%;
 }
 /*# sourceMappingURL=flashcard.css.map */
