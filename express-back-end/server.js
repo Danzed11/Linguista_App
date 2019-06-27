@@ -49,28 +49,8 @@ App.get('/testbook/data', (req, res) => {
   });
 });
 
+
 App.post('/upload', (req, res) => {
-  upload(req,res,function(err) {
-    if(err) {
-        return res.end("Error uploading file.");
-    }
-    let output = ""
-    extract(epubFullPath, (err, txt, done) => {
-      output = output + txt
-      if (done) {
-        res.json(output)
-      }
-    })
-      // ,
-      // function() {
-      //   res.redirect('/library')
-      // }
-
-
-  });
-})
-
-App.post('/uploadtest', (req, res) => {
   upload(req,res,function(err) {
     if(err) {
         return res.end("Error uploading file.");
