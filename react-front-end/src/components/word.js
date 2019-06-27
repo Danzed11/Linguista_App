@@ -17,9 +17,12 @@ class Word extends Component {
       .get(url) // You can simply make your requests to "/api/whatever you want"
       .then(response => {
         let tx = response.data.data.translations[0].translatedText
-        console.log(`${input}: ${tx}`)
         this.setState({translated: true, translation: tx});
-      });
+        let data = {original: input, translation: tx}
+        axios.post('/studylist', data)
+        .then((res) => console.log(res))
+        .catch((error) => console.log(error))
+      })
   }
 
   render() {
