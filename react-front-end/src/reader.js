@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Word from './components/word.js';
 
 import axios from 'axios';
-import './stylesheets/wordlist.css';
+import './stylesheets/reader.css';
 
 class Reader extends Component {
   constructor(props) {
@@ -40,10 +40,13 @@ class Reader extends Component {
     } else {
       return (
         <div className="chapter-div">
+          <h1> Chapter {this.props.match.params.chapter}</h1>
+          <article className="reading-space">
           {this.state.words.map((word, index) => {
             return <Word keyprop={index} foreign={word.word}/>
           })
           }
+          </article>
           {/*{this.state.words}*/}
         </div>
           )

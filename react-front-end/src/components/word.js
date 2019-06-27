@@ -25,9 +25,9 @@ class Word extends Component {
   render() {
     if (this.state.translated) {
       return (
-        <div key={this.props.keyprop} word={this.props.foreign}>
-          <div>{this.state.translation}</div>
-          <div>{this.props.foreign} </div>
+        <div key={this.props.keyprop} word={this.props.foreign} className="translated-pair">
+          <div className="translated-word">{this.state.translation} </div>
+          <div className="untranslated-word">{this.props.foreign} </div>
         </div>
       );
     } else {
