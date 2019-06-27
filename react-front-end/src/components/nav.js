@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";import '../stylesheets/nav.css';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import '../stylesheets/nav.css';
 
 class Nav extends Component {
 	render() {
@@ -24,7 +25,7 @@ class Nav extends Component {
 					</div>
 				</div>
 				<div className="nav-right">
-					<h4>Hi User</h4>
+					<h4>Bonjour Marc</h4>
 				</div>
 			</nav>
 

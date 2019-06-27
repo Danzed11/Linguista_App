@@ -52,7 +52,23 @@
 }
 
 .btn-con {
-  display: inline-block;
+  opacity: 0.85;
+  width: 180px;
+  margin: 1px 10px;
+  padding: 10px;
+  font-size: 18px;
+  background-color: #499fa4;
+  color: #13292a;
+  border: #499fa4 solid 1px;
+  border-radius: 6px;
+  -webkit-box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
+  box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
+  font-size: 1rem;
+}
+.btn-con:hover {
+  opacity: 1;
+  cursor: pointer;
+
 }
 
 .overlay {
