@@ -75,13 +75,13 @@
 }
 
 button.btn_del {
-	// font-family: $logo3;
 	padding: 10px;
 	background: $secondaryCol;
 	color: $navCol;
 	border: $secondaryCol solid 1px;
 	border-radius: 12px;
 	box-shadow: $shadow;
+	font-size: 1rem;
 }
 .btn_del:hover {
 	border: $secondaryCol solid 1.5px;

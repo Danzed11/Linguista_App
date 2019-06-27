@@ -141,6 +141,7 @@ button.btn_del {
   border-radius: 12px;
   -webkit-box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
           box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
+  font-size: 1rem;
 }
 
 .btn_del:hover {

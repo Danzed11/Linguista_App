@@ -18,6 +18,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-direction: column;
 }
 .overlay {
 	@include overlaySetting;
@@ -27,4 +28,7 @@
 	@include dash-container;
 	// @include page-container;
 	position: relative;
+}
+.upload {
+	text-align: start;
 }
