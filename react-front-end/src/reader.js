@@ -21,8 +21,9 @@ class Reader extends Component {
         });
   }
   componentWillMount() {
+    let url = `/getchapter/${this.props.match.params.book}/${this.props.match.params.chapter}`
     axios
-      .get('/testbook/data') // You can simply make your requests to "/api/whatever you want"
+      .get(url) // You can simply make your requests to "/api/whatever you want"
       .then(response => {
         this.setState({
           words: response.data,

@@ -32,6 +32,15 @@ App.get('/words/data', (req, res) => {
   });
 });
 
+App.get('/getchapter/:book/:chapter', (req, res) => {
+  knex('words')
+  .where({bookid: req.params.book, chapter_ref: req.params.chapter})
+  .asCallback((err, result) => {
+    res.json(result)
+  })
+
+})
+
 App.get('/testbook/data', (req, res) => {
   knex('words')
   .where({bookid: 6, chapter_ref: 4})

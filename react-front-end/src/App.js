@@ -47,7 +47,7 @@ class App extends Component {
 				<Route path='/library' component={Booklist} />
 				<Route path='/wordlist' component={Wordlist} />
 				<Route path='/study' component={Study} />
-				<Route path='/reader' component={Reader} />
+				<Route path='/reader/:book/:chapter' component={Reader} />
 			</BrowserRouter>
 		);
 	}
