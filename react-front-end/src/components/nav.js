@@ -24,7 +24,7 @@ class Nav extends Component {
 					</div>
 				</div>
 				<div className="nav-right">
-					<h4>Hi User</h4>
+					<h4>Bonjour Marc</h4>
 				</div>
 			</nav>
 

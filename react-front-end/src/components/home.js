@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import '../stylesheets/home.css';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";import '../stylesheets/nav.css';
+
 class Home extends Component {
   render() {
      
@@ -10,9 +12,9 @@ class Home extends Component {
             <div className="homelogo">
               <img src={require("../images/linguista-large-logobop.png")} alt=""/>
             </div>
-              <div className="btn-con">
-                <button>Login</button>
-                <button>Register</button>
+              <div>
+              <Link to ="/dashboard"><button className="btn-con">Login</button></Link>
+              <Link to ="/dashboard"><button className="btn-con">Register</button></Link>
               </div>
               <div className="overlay"></div>
              </div>       

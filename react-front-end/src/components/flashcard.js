@@ -7,7 +7,7 @@ class Flashcard extends Component {
 		return (
 			<button className="button flashcardContainer">
 				<Link to="/study" style={{ textDecoration: 'none', color: '#13292a' }}>
-					<h1>Click here to study your words</h1>
+					<h1>Click here to study your words with Flashcards</h1>
 				</Link>
 			</button>
 		);
