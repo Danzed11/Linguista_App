@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import flashcard from './flashcard_helper';
+import Nav from './components/nav.js';
+
 
 //Component that houses flashcard game.
 
@@ -51,12 +53,15 @@ class Study extends Component {
   render() {
     if (this.state.startPage) {
       return (
+        <fragment>
+          <Nav />
         <div className="flashcard-game">
           <h2> Start Studying </h2>
           <button onClick={this.startUp} >
             Begin
           </button>
         </div>
+    </fragment>
         )
     }
     if (!this.state.showAnswer) {
