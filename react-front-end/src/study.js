@@ -56,45 +56,6 @@ class Study extends Component {
 		this.setState({ showAnswer: true });
 	};
 
-<<<<<<< HEAD
-	render() {
-		if (this.state.startPage) {
-			return (
-				<div className="flashcard-game">
-					<div className="game-container">
-						<div className="overlay" />
-						<div className="content">
-							<h1> Start Studying </h1>
-							<button onClick={this.startUp}>Begin</button>
-						</div>
-					</div>
-				</div>
-			);
-		}
-		if (!this.state.showAnswer) {
-			return (
-				<div className="App">
-					<h1>Card: {this.state.displayCard.round}</h1>
-					<h2>{this.state.displayCard.foreign_word}</h2>
-					<hr />
-					<button onClick={this.displayAnswer}>Show answer!</button>
-				</div>
-			);
-		} else {
-			return (
-				<div className="App">
-					<h1>Card: {this.state.displayCard.round}</h1>
-					<h2>{this.state.displayCard.foreign_word}</h2>
-					<hr />
-					<h2>{this.state.displayCard.english_word}</h2>
-					<button onClick={this.newCard}>Couldn't remember</button>
-					<button onClick={this.newCard}>Barely Got it</button>
-					<button onClick={this.newCard}>Easy to answer</button>
-				</div>
-			);
-		}
-	}
-=======
   render() {
     if (this.state.startPage) {
       return (
@@ -138,7 +99,6 @@ class Study extends Component {
         </div>)
     }
   }
->>>>>>> master
 }
 
 export default Study;
