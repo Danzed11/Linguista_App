@@ -32,6 +32,12 @@ App.get('/words/data', (req, res) => {
   });
 });
 
+App.get('/books/data', (req, res) => {
+  knex('books').asCallback((err,result) => {
+    res.json(result);
+  });
+});
+
 App.get('/getchapter/:book/:chapter', (req, res) => {
   knex('words')
   .where({bookid: req.params.book, chapter_ref: req.params.chapter})
@@ -56,7 +62,7 @@ App.post('/upload', (req, res) => {
         return res.end("Error uploading file.");
     }
     knex('books').insert({
-      title: 'Simon vs The Homosapien Agenda '
+      title: req.body.title
     })
     .returning('id')
     .then(function(bookId){
@@ -84,7 +90,8 @@ App.post('/upload', (req, res) => {
 
         })
         // res.json(output)
-        res.status(204).send()
+        // res.status(204).send()
+        res.redirect('/library')
       })
       .catch(err => {
         console.log(`Error: ${err}`)

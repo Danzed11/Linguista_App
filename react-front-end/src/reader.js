@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import Nav from './components/nav.js';
 import Word from './components/word.js';
 
 import axios from 'axios';
@@ -39,11 +40,18 @@ class Reader extends Component {
     let backurl = `/reader/${this.props.match.params.book}/${this.state.prev}`
     let nexturl = `/reader/${this.props.match.params.book}/${this.state.next}`
     if (this.state.loading) {
-      return (<div className="loading-div">Chapter Loading...</div>);
+      return (
+        <fragment>
+        <Nav/>
+        <div className="loading-div">Chapter Loading...</div>
+        </fragment>
+        );
     } else if (this.state.words == "") {
       return (<div className="loading-div">Chapter missing</div>)
     } else {
       return (
+        <fragment>
+        <Nav/>
         <div className="chapter-div">
           <h1> Chapter {this.props.match.params.chapter}</h1>
           <article className="reading-space">
@@ -55,6 +63,7 @@ class Reader extends Component {
           <a href={backurl}><button>Previous Chapter</button></a>
           <a href={nexturl}><button>Next Chapter</button></a>
         </div>
+        </fragment>
           )
     }
   }

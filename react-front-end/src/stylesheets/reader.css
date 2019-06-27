@@ -1,7 +1,7 @@
 .chapter-div {
   white-space: pre-line;
   overflow: auto;
-  margin: 30px auto 10px;
+  margin: 90px auto 10px;
   width: 60%;
   background-color: rgb(255, 255, 255, 0.65);
   border-radius: 12px;
@@ -15,7 +15,7 @@
   margin: auto;
   white-space: pre-line;
   overflow: auto;
-  margin: 30px auto 10px;
+  margin: 90px auto 10px;
   width: 60%;
   height: 40%;
   background-color: rgb(255, 255, 255, 0.65);
