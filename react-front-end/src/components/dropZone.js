@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../stylesheets/dropzone.css';
+import UploadForm from './epubUploadForm';
 
 class DropZone extends Component {
 	render() {
@@ -7,7 +8,10 @@ class DropZone extends Component {
 			<div className="dropZone">
 				<div className="container">
 					<div className="overlay" />
-					<h1>upload your books here</h1>
+					<h2>Upload your books here!</h2>
+					<div className="upload">
+						<UploadForm />
+					</div>
 				</div>
 			</div>
 		);

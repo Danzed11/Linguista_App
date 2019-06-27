@@ -12,9 +12,9 @@ class DashboardWordlist extends Component {
 						<strong> your </strong>books.
 					</p>
 					<p>
-						Drag and Drop your e-pub to save it in your library. When you're
-						ready to read, click on the book you want to read and read to your
-						heart's content.
+						Upload your e-pub to save it in your library. When you're ready to
+						read, click on the book you want to read and read to your heart's
+						content.
 					</p>
 					<p>
 						When you're stuck, click on the word to see the translation. This

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import axios from 'axios';
 import flashcard from './flashcard_helper';
+import './stylesheets/flashcard.css';
 import Nav from './components/nav.js';
 
 
@@ -11,44 +12,49 @@ import Nav from './components/nav.js';
 //into a setState creating a new flashcard class.
 
 class Study extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      startPage: true,
-      showAnswer: false,
-      message: 'Click the button to load data!'}
-  }
+	constructor(props) {
+		super(props);
+		this.state = {
+			startPage: true,
+			showAnswer: false,
+			message: 'Click the button to load data!',
+		};
+	}
 
-  fetchData = () => {
-    axios.get('/words/data') // You can simply make your requests to "/api/whatever you want"
-    .then((response) => {
-      this.setState({
-        cardlist: response.data
-      });
-    }).then((response) => {
-      this.setState({flashcardInstance: new flashcard(this.state.cardlist)});
-    })
-  }
-  componentDidMount() {
-    this.fetchData();
-  }
-  startUp = () => {
-    this.setState({
-      displayCard: this.state.flashcardInstance.card(),
-      startPage: false
-    })
-  }
+	fetchData = () => {
+		axios
+			.get('/words/data') // You can simply make your requests to "/api/whatever you want"
+			.then(response => {
+				this.setState({
+					cardlist: response.data,
+				});
+			})
+			.then(response => {
+				this.setState({
+					flashcardInstance: new flashcard(this.state.cardlist),
+				});
+			});
+	};
+	componentDidMount() {
+		this.fetchData();
+	}
+	startUp = () => {
+		this.setState({
+			displayCard: this.state.flashcardInstance.card(),
+			startPage: false,
+		});
+	};
 
-  newCard = () => {
-    this.setState({
-      displayCard: this.state.flashcardInstance.card(),
-      showAnswer: false
-    })
-  }
+	newCard = () => {
+		this.setState({
+			displayCard: this.state.flashcardInstance.card(),
+			showAnswer: false,
+		});
+	};
 
-  displayAnswer = () => {
-    this.setState({showAnswer: true})
-  }
+	displayAnswer = () => {
+		this.setState({ showAnswer: true });
+	};
 
   render() {
     if (this.state.startPage) {

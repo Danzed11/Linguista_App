@@ -32,6 +32,14 @@ class LibraryCarousel extends Component {
 							alt="Game Of Throness"
 						/>
 					</div>
+					<div>
+						<h1>Moi, Simon, 16ans, Homo Sapiens</h1>
+						<img
+							src="https://images-na.ssl-images-amazon.com/images/I/813lU7WPKvL.jpg"
+							height="300px"
+							alt="Moi, Simon, 16ans, Homo Sapiens"
+						/>
+					</div>
 				</Carousel>
 			</div>
 		);
