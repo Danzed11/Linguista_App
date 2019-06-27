@@ -32,6 +32,17 @@ App.get('/words/data', (req, res) => {
   });
 });
 
+App.post('/studylist', (req, res) => {
+  console.dir(req)
+  knex('studylist')
+    .insert({
+      foreign_word: req.body.original,
+      english_word: req.body.translation,
+      interval: 1
+    })
+    .then(entry => res.status(204).send())
+})
+
 App.get('/books/data', (req, res) => {
   knex('books').asCallback((err,result) => {
     res.json(result);
