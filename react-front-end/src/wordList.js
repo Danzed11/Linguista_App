@@ -29,12 +29,13 @@ class Wordlist extends Component {
 				<div className="wordllist-page">
 					<div className="content-container">
 						<table className="word">
-							<tr>
-								<th>Foreign word</th>
-								<th>Translated word</th>
-								<th>Delete</th>
-							</tr>
-
+							<thead>
+								<tr>
+									<th>Foreign word</th>
+									<th>Translated word</th>
+									<th>Delete</th>
+								</tr>
+							</thead>
 							{this.state.words.map(word => (
 								<Study_word
 									foreign={word.foreign_word}
@@ -42,7 +43,6 @@ class Wordlist extends Component {
 								/>
 							))}
 						</table>
-
 						<div className="overlay" />
 					</div>
 				</div>

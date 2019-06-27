@@ -43,7 +43,8 @@
 }
 
 .wordlistContainer-dashboard .overlay {
-  opacity: 0.7;
+  top: 0;
+  opacity: 0.5;
   position: absolute;
   z-index: 0;
   background-color: #91cabe;
@@ -84,9 +85,6 @@
 
 .wordllist-page .content-container {
   position: relative;
-  z-index: 4;
-  height: 80vh;
-  width: 80vw;
   border: #13292a solid 1px;
   border-radius: 12px;
   -webkit-box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
@@ -100,15 +98,53 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 4;
+  height: 80vh;
+  width: 50vw;
   overflow: hidden;
+  padding: 0 20px;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
 }
 
-.wordllist-page .content {
+.wordllist-page .word {
+  table-layout: fixed;
   position: relative;
-  padding: 20px;
+  top: 20px;
   opacity: 1;
   z-index: 2;
-  position: relative;
   overflow: auto;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.wordllist-page .word thead {
+  border-bottom: 1px #499fa4 double;
+  font-size: 1.5rem;
+}
+
+.wordllist-page .word tr {
+  border-bottom: #499fa4 solid 1px;
+  text-align: center;
+}
+
+.wordllist-page .word tr:hover {
+  background-color: #b5dfd6;
+}
+
+button.btn_del {
+  padding: 10px;
+  background: #499fa4;
+  color: #13292a;
+  border: #499fa4 solid 1px;
+  border-radius: 12px;
+  -webkit-box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
+          box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
+}
+
+.btn_del:hover {
+  border: #499fa4 solid 1.5px;
+  background-color: rgba(143, 204, 219, 0.44);
 }
 /*# sourceMappingURL=wordlist.css.map */

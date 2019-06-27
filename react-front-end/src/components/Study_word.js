@@ -7,7 +7,7 @@ class Study_word extends Component {
 				<td>{this.props.foreign}</td>
 				<td>{this.props.english}</td>
 				<td>
-					<button>Delete</button>
+					<button className="btn_del">Delete</button>
 				</td>
 			</tr>
 		);
