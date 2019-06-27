@@ -39,6 +39,9 @@
 }
 
 .btn-con {
+  opacity: .85;
+  margin: 16px;
+  width: 180px;
 	padding: 10px;
 	background-color: #499fa4;
 	color: #13292a;
@@ -49,6 +52,9 @@
 	font-size: 1rem;
 }
 
+.btn-con:hover {
+  opacity: 1;
+} 
 .overlay {
 	@include overlaySetting;
 }
