@@ -3,7 +3,8 @@ import axios from 'axios';
 import flashcard from './flashcard_helper';
 import './stylesheets/flashcard.css';
 import Nav from './components/nav.js';
-
+import Tabs from './tabs.jsx';
+import Wordlist from './wordList';
 
 //Component that houses flashcard game.
 
@@ -56,49 +57,54 @@ class Study extends Component {
 		this.setState({ showAnswer: true });
 	};
 
-  render() {
-    if (this.state.startPage) {
-      return (
-        <fragment>
-          <Nav />
-        <div className="flashcard-game">
-          <h2> Start Studying </h2>
-          <button onClick={this.startUp} >
-            Begin
-          </button>
-        </div>
-    </fragment>
-        )
-    }
-    if (!this.state.showAnswer) {
-      return (
-        <div className="flashcard-game">
-          <h1>Card: { this.state.displayCard.round }</h1>
-          <h2>{ this.state.displayCard.foreign_word}</h2>
-          <hr/>
-          <button onClick={this.displayAnswer} >
-            Show answer!
-          </button>
-        </div>
-      );
-    } else {
-      return (<div className="flashcard-game">
-          <h1>Card: { this.state.displayCard.round }</h1>
-          <h2>{ this.state.displayCard.foreign_word}</h2>
-          <hr/>
-          <h2>{ this.state.displayCard.english_word}</h2>
-          <button onClick={this.newCard} >
-            Couldn't remember
-          </button>
-          <button onClick={this.newCard} >
-            Barely Got it
-          </button>
-          <button onClick={this.newCard} >
-            Easy to answer
-          </button>
-        </div>)
-    }
-  }
+	render() {
+		if (this.state.startPage) {
+			return (
+				<div className="App">
+					<Nav />
+
+					<Tabs className="tabs">
+						<div label="Words">
+							<Wordlist />
+						</div>
+						<div label="Flashcards">
+							<div className="flashcard-game">
+								<div className="game-container">
+									<div className="overlay" />
+									<div className="content">
+										<h2> Start Studying </h2>
+										<button onClick={this.startUp}>Begin</button>
+									</div>
+								</div>
+							</div>
+						</div>
+					</Tabs>
+				</div>
+			);
+		}
+		if (!this.state.showAnswer) {
+			return (
+				<div className="flashcard-game">
+					<h1>Card: {this.state.displayCard.round}</h1>
+					<h2>{this.state.displayCard.foreign_word}</h2>
+					<hr />
+					<button onClick={this.displayAnswer}>Show answer!</button>
+				</div>
+			);
+		} else {
+			return (
+				<div className="flashcard-game">
+					<h1>Card: {this.state.displayCard.round}</h1>
+					<h2>{this.state.displayCard.foreign_word}</h2>
+					<hr />
+					<h2>{this.state.displayCard.english_word}</h2>
+					<button onClick={this.newCard}>Couldn't remember</button>
+					<button onClick={this.newCard}>Barely Got it</button>
+					<button onClick={this.newCard}>Easy to answer</button>
+				</div>
+			);
+		}
+	}
 }
 
 export default Study;

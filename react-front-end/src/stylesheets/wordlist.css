@@ -72,6 +72,7 @@
 .wordllist-page {
   position: relative;
   height: 50vh;
+  top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -82,13 +83,13 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  top: 60px;
   z-index: 3;
   height: 100vh;
 }
 
-.wordllist-page .content-container {
+.wordllist-page .contentContainer {
   position: relative;
+  background-color: #91cabe85;
   border: #13292a solid 1px;
   border-radius: 12px;
   -webkit-box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);

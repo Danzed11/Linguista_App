@@ -1,60 +1,56 @@
 @import '_variables';
 
 .homepage {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	position: relative;
+	height: 100vh;
+	width: 100vw;
+	overflow: hidden;
 }
 
 .content-container {
-  @include dash-container;
-  width: 80vw;
-  height: 80vh;
-  justify-content: center;
-  align-items: center;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  z-index: 3;
-  overflow: hidden;
+	@include dash-container;
+	width: 80vw;
+	height: 80vh;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	z-index: 3;
+	overflow: hidden;
 }
 
 .homelogo {
-  position: relative;
-  width: 75vw;
-
+	position: relative;
+	width: 75vw;
 }
 
-
 .homelogo img {
-  width: 100%;
+	width: 100%;
 }
 
 .btn-con {
-  padding: 10px;
-  background-color: #499fa4;
-  color: #13292a;
-  border: #499fa4 solid 1px;
-  border-radius: 12px;
-  -webkit-box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
-          box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
-  font-size: 1rem;
+	padding: 10px;
+	background-color: #499fa4;
+	color: #13292a;
+	border: #499fa4 solid 1px;
+	border-radius: 12px;
+	-webkit-box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
+	box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
+	font-size: 1rem;
 }
 
 .overlay {
-  @include overlaySetting
-
+	@include overlaySetting;
 }
-
 
 /*# sourceMappingURL=home.css.map */

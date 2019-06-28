@@ -24,12 +24,38 @@
 }
 .game-container {
 	@include dash-container;
-	height: 70vh;
-	width: 80vw;
+	height: 80vh;
+	width: 50vw;
 	overflow: hidden;
 	z-index: 4;
 	position: relative;
 }
 .overlay {
 	@include overlaySetting;
+}
+
+.tab-list {
+	font-size: 1.5em;
+	background-clip: $secondaryCol;
+	padding-left: 0;
+	border-bottom: 1px solid $navCol;
+}
+.tabs {
+	position: absolute;
+	display: flex;
+	top: 70px;
+	width: 100vw;
+}
+.tab-list-item {
+	display: inline-block;
+	list-style: none;
+	margin-bottom: -1px;
+	padding: 0.5rem 0.75rem;
+	border-bottom: 1px solid $navCol;
+}
+.tab-list-active {
+	background-color: $primaryCol;
+	border: solid $navCol;
+	border-radius: 12px 12px 0 0;
+	border-width: 1px 1px 0 1px;
 }

@@ -44,9 +44,11 @@
 .wordllist-page {
 	position: relative;
 	height: 50vh;
+	top: 0;
 	@include page-container;
-	.content-container {
+	.contentContainer {
 		position: relative;
+		background-color: #91cabe85;
 		@include dash-container;
 		z-index: 4;
 		height: 80vh;
