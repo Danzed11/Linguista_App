@@ -72,6 +72,10 @@
 
 .upload {
   text-align: start;
-  margin-left: 30%;
+  margin-left: 20%;
+}
+
+.upload input {
+  border-radius: 8px;
 }
 /*# sourceMappingURL=dropzone.css.map */
