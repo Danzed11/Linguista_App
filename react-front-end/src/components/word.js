@@ -31,7 +31,7 @@ class Word extends Component {
           headers: {'Content-Type': 'application/x-www-form-urlencoded'}
         })
       })
-      .then(response => console.log(response));
+      .then(response => {return response});
   }
 
   render() {

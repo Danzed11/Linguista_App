@@ -25,5 +25,6 @@ CREATE TABLE Studylist(
   id SERIAL PRIMARY KEY,
   foreign_word VARCHAR(100) NOT NULL,
   english_word VARCHAR(100) NOT NULL,
-  interval int
+  interval int,
+  UNIQUE (foreign_word)
 );
