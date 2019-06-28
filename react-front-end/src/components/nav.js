@@ -9,11 +9,13 @@ class Nav extends Component {
 			<nav>
 				<div className="nav-left">
 					{/* <h1>Linguista</h1> */}
+					<Link to="/">
 					<img
 						className="logo"
 						src="https://github.com/Danzed11/Linguista_App/blob/master/react-front-end/public/logo/logoLG-Col.png?raw=true"
 						alt="Linguista"
 					/>
+					</Link>
 					<div className="dropdown">
 						<button className="dropbtn">Menu <span id="droparrow">⌄</span>
 							</button>
