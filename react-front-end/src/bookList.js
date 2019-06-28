@@ -30,18 +30,21 @@ class Booklist extends Component {
 					<div>
 						<div className="library-page">
 							<div className="content">
-								<h1>This is the booklist</h1>
+								<h1>Your Library</h1>
 								{this.state.books.map(book => {
 									let url = `/reader/${book.id}/3`;
 									return (
-										<div>
-											<Link to={url}>{book.title}</Link>
-										</div>
+										<ul className="booklist">
+											<li>
+												<Link to={url}>{book.title}</Link>
+											</li>
+										</ul>
 									);
 								})}
 							</div>
 
 							<div className="upload">
+								<h2>Upload Your Book</h2>
 								<UploadForm />
 							</div>
 						</div>

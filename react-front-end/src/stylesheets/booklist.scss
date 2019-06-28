@@ -22,13 +22,39 @@
 		@include overlaySetting;
 	}
 }
+
 .library-page {
 	position: relative;
 	background-color: #91cabec2;
-	padding: 60px;
+	padding: 10px 60px;
 	display: inline-block;
 	text-align: center;
 	border: $navCol solid 1px;
 	border-radius: 12px;
 	box-shadow: $shadow;
+	.content {
+		height: 65vh;
+		overflow: auto;
+		border-bottom: $navCol solid 1.5px;
+		.booklist {
+			list-style: none;
+			margin-top: 65px;
+		}
+		h1 {
+			margin-top: 10px;
+			position: absolute;
+			z-index: 9;
+			background-color: #91cabec2;
+			font-family: cursive;
+			font-weight: bold;
+			text-decoration: underline;
+			font-size: 2.5rem;
+			align-self: center;
+		}
+	}
+	h2 {
+		font-family: cursive;
+		font-weight: bold;
+		text-decoration: underline;
+	}
 }
