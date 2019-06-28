@@ -5,10 +5,9 @@
 	position: relative;
 	flex: 1;
 	margin-left: 20px;
+	height: 47vh;
 	@include dash-container;
-	top: 35px;
-	// font-family: 'Source Sans Pro';
-	height: 42vh;
+	top: 40px;
 	overflow: hidden;
 
 	.bold-words {

@@ -7,6 +7,7 @@
       -ms-flex: 1;
           flex: 1;
   margin-left: 20px;
+  height: 47vh;
   border: #13292a solid 1px;
   border-radius: 12px;
   -webkit-box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
@@ -18,8 +19,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  top: 35px;
-  height: 42vh;
+  top: 40px;
   overflow: hidden;
 }
 
