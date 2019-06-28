@@ -8,7 +8,7 @@ import FlashcardActivity from './flashcardactivity';
 class Study extends Component {
 	render() {
 		return (
-			<div className="App">
+			<div>
 				<Nav />
 				<Tabs className="tabs">
 					<div label="Words">

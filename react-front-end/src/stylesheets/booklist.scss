@@ -24,7 +24,11 @@
 }
 .library-page {
 	position: relative;
-	height: 50vh;
-	list-style: none;
-	@include page-container;
+	background-color: #91cabec2;
+	padding: 60px;
+	display: inline-block;
+	text-align: center;
+	border: $navCol solid 1px;
+	border-radius: 12px;
+	box-shadow: $shadow;
 }
