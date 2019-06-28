@@ -19,7 +19,6 @@
       -ms-flex-align: center;
           align-items: center;
   top: 35px;
-  font-family: 'Source Sans Pro';
   height: 42vh;
   overflow: hidden;
 }
@@ -89,7 +88,7 @@
 
 .wordllist-page .contentContainer {
   position: relative;
-  background-color: #91cabe85;
+  background-color: #91cabec2;
   border: #13292a solid 1px;
   border-radius: 12px;
   -webkit-box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
@@ -106,7 +105,7 @@
   z-index: 4;
   height: 80vh;
   width: 50vw;
-  overflow: hidden;
+  overflow: auto;
   padding: 0 20px;
   -webkit-box-align: stretch;
       -ms-flex-align: stretch;
@@ -130,27 +129,26 @@
 }
 
 .wordllist-page .word tr {
+  top: 20px;
   border-bottom: #499fa4 solid 1px;
   text-align: center;
 }
 
-.wordllist-page .word tr:hover {
-  background-color: #b5dfd6;
-}
-
 button.btn_del {
   padding: 10px;
-  background: #499fa4;
-  color: #13292a;
-  border: #499fa4 solid 1px;
+  color: #e2e9e8;
+  background-color: #b81f14;
+  border: #b5dfd6 solid 1px;
   border-radius: 12px;
   -webkit-box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
           box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
   font-size: 1rem;
+  font-weight: bold;
 }
 
 .btn_del:hover {
-  border: #499fa4 solid 1.5px;
-  background-color: rgba(143, 204, 219, 0.44);
+  color: #e2e9e8;
+  border: #e2e9e8 solid 1.5px;
+  background-color: #88170f;
 }
 /*# sourceMappingURL=wordlist.css.map */
