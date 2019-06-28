@@ -27,25 +27,3 @@ CREATE TABLE Studylist(
   english_word VARCHAR(100) NOT NULL,
   interval int
 );
-
-INSERT INTO books (title, coverArt)
-  VALUES ('The Great Gatsby', bytea('pathtoimage'));
-
-
-INSERT INTO Studylist (foreign_word, english_word, interval)
-  VALUES ('méduse', 'jellyfish', 1);
-INSERT INTO Studylist (foreign_word, english_word, interval)
-  VALUES ('papillon', 'butterfly', 1);
-INSERT INTO Studylist (foreign_word, english_word, interval)
-  VALUES ('vache', 'cow', 1);
-INSERT INTO Studylist (foreign_word, english_word, interval)
-  VALUES ('chèvre', 'goat', 1);
-INSERT INTO Studylist (foreign_word, english_word, interval)
-  VALUES ('taureau', 'bull', 1);
-INSERT INTO Studylist (foreign_word, english_word, interval)
-  VALUES ('grenouille', 'frog', 1);
-INSERT INTO Studylist (foreign_word, english_word, interval)
-  VALUES ('élan', 'moose', 1);
-INSERT INTO Studylist (foreign_word, english_word, interval)
-  VALUES ('chauve-souris', 'bat', 1);
-
