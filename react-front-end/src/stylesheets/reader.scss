@@ -1,3 +1,4 @@
+@import '_variables';
 
 .chapter-div {
   white-space: pre-line;
@@ -10,7 +11,6 @@
   align-items: center;
   text-align: center;
   position: relative;
-  min-height: 85vh;
 
 }
 
@@ -89,40 +89,27 @@ body {
   display: flex;
   position: absolute;
   font-size: 4rem;
-  
 
 }
 
 .prev-next-leftarrow {
- background-color: #3b7b7d;
+ background-color: $secondaryCol;
  transform:  translateY(-50%);
  position: fixed;
  top: calc(50% + 35px);
  border-radius: 0 25px 25px 0;
- height: 40%;
- opacity: .35;
- padding: 0 3px;
+ height: 30%;
+ width: 4%;
 
-}
-
-.prev-next-leftarrow:hover {
-  opacity: .8;
-  cursor: pointer;
 }
 
 .prev-next-rightarrow {
-  background-color: #3b7b7d;
+  background-color: $secondaryCol;
   transform:  translateY(-50%);
   position: fixed;
   top: calc(50% + 35px);
   right: 20%;
   border-radius: 25px 0 0 25px;
-  height: 40%;
-  opacity: .35;
-  padding: 0 3px;
-}
-
-.prev-next-rightarrow:hover {
-  opacity: .8;
-  cursor: pointer;
+  height: 30%;
+  width: 4%;
 }
