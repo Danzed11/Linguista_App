@@ -7,11 +7,13 @@ import './stylesheets/wordlist.css';
 class Wordlist extends Component {
 	constructor(props) {
 		super(props);
+		this.renderWords = this.renderWords.bind(this);
 		this.state = {
 			loading: true,
 		};
 	}
-	componentWillMount() {
+
+	renderWords() {
 		axios
 			.get('/words/data') // You can simply make your requests to "/api/whatever you want"
 			.then(response => {
@@ -20,6 +22,10 @@ class Wordlist extends Component {
 					loading: false,
 				});
 			});
+	}
+
+	componentWillMount() {
+		this.renderWords()
 	}
 	render() {
 		if (this.state.loading) {
@@ -38,8 +44,10 @@ class Wordlist extends Component {
 							</thead>
 							{this.state.words.map(word => (
 								<Study_word
+									renderWords={this.renderWords}
 									foreign={word.foreign_word}
 									english={word.english_word}
+									dbID={word.id}
 								/>
 							))}
 						</table>

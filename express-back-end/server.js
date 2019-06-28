@@ -34,7 +34,6 @@ App.get('/words/data', (req, res) => {
 
 App.post('/studylist', (req, res) => {
   let request = Object.keys(req.body)
-  console.dir(JSON.parse(request[0]))
   let data = JSON.parse(request[0])
   knex('studylist')
     .insert({
@@ -43,6 +42,17 @@ App.post('/studylist', (req, res) => {
       interval: 1
     })
     .then(entry => res.status(204).send())
+});
+
+App.post('/delete-word', (req, res) => {
+  let request = Object.keys(req.body)
+  let data = JSON.parse(request[0])
+  knex('studylist')
+    .where({id: data.wordId})
+    .del()
+    .asCallback((x) => {
+      res.status(204).send()
+    })
 })
 
 App.get('/books/data', (req, res) => {
