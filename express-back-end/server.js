@@ -33,11 +33,13 @@ App.get('/words/data', (req, res) => {
 });
 
 App.post('/studylist', (req, res) => {
-  console.dir(req)
+  let request = Object.keys(req.body)
+  console.dir(JSON.parse(request[0]))
+  let data = JSON.parse(request[0])
   knex('studylist')
     .insert({
-      foreign_word: req.body.original,
-      english_word: req.body.translation,
+      foreign_word: data.original,
+      english_word: data.translation,
       interval: 1
     })
     .then(entry => res.status(204).send())

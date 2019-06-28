@@ -13,16 +13,25 @@ class Word extends Component {
 
   translationHandler(input) {
     let url = `https://translation.googleapis.com/language/translate/v2?key=AIzaSyD0A7tw-SVBIHFZwEH12i2SS__8LviSfFE&q=${input}&target=en`
+    let output = {}
+
     axios
       .get(url) // You can simply make your requests to "/api/whatever you want"
       .then(response => {
         let tx = response.data.data.translations[0].translatedText
         this.setState({translated: true, translation: tx});
-        let data = {original: input, translation: tx}
-        axios.post('/studylist', data)
-        .then((res) => console.log(res))
-        .catch((error) => console.log(error))
+        // return axios.post('/studylist', {original: input, translation: tx}, {headers: {'Content-Type': 'application/x-www-form-urlencoded'}})
+        return axios({
+          method: 'post',
+          url: '/studylist',
+          data: {
+            original: input,
+            translation: tx
+          },
+          headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
       })
+      .then(response => console.log(response));
   }
 
   render() {
