@@ -9,7 +9,7 @@ class Nav extends Component {
 			<nav>
 				<div className="nav-left">
 					{/* <h1>Linguista</h1> */}
-					<Link to="/">
+					<Link to="/dashboard">
 					<img
 						className="logo"
 						src="https://github.com/Danzed11/Linguista_App/blob/master/react-front-end/public/logo/logoLG-Col.png?raw=true"
