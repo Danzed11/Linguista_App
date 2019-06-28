@@ -42,6 +42,7 @@ App.post('/studylist', (req, res) => {
       interval: 1
     })
     .then(entry => res.status(204).send())
+    .catch(err => {return err})
 });
 
 App.post('/delete-word', (req, res) => {
