@@ -7,7 +7,7 @@
 	margin-left: 20px;
 	@include dash-container;
 	top: 35px;
-	font-family: 'Source Sans Pro';
+	// font-family: 'Source Sans Pro';
 	height: 42vh;
 	overflow: hidden;
 
@@ -48,12 +48,12 @@
 	@include page-container;
 	.contentContainer {
 		position: relative;
-		background-color: #91cabe85;
+		background-color: #91cabec2;
 		@include dash-container;
 		z-index: 4;
 		height: 80vh;
 		width: 50vw;
-		overflow: hidden;
+		overflow: auto;
 		padding: 0 20px;
 		align-items: stretch;
 	}
@@ -71,25 +71,26 @@
 			font-size: 1.5rem;
 		}
 		tr {
+			top: 20px;
 			border-bottom: $secondaryCol solid 1px;
 			text-align: center;
-		}
-		tr:hover {
-			background-color: $primaryCol;
 		}
 	}
 }
 
 button.btn_del {
 	padding: 10px;
-	background: $secondaryCol;
-	color: $navCol;
-	border: $secondaryCol solid 1px;
+	color: #e2e9e8;
+	background-color: #b81f14;
+
+	border: $primaryCol solid 1px;
 	border-radius: 12px;
 	box-shadow: $shadow;
 	font-size: 1rem;
+	font-weight: bold;
 }
 .btn_del:hover {
-	border: $secondaryCol solid 1.5px;
-	background-color: rgba(143, 204, 219, 0.44);
+	color: #e2e9e8;
+	border: #e2e9e8 solid 1.5px;
+	background-color: #88170f;
 }

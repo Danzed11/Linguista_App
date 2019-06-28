@@ -35,6 +35,7 @@ class Wordlist extends Component {
 				<div className="wordllist-page">
 					<div className="contentContainer">
 						<table className="word">
+							
 							<thead>
 								<tr>
 									<th>Foreign word</th>

@@ -24,11 +24,16 @@
 }
 .game-container {
 	@include dash-container;
-	height: 80vh;
+	height: 50vh;
 	width: 50vw;
 	overflow: hidden;
 	z-index: 4;
 	position: relative;
+	background: #499fa487;
+}
+.content {
+	display: flex;
+	flex-direction: column;
 }
 .overlay {
 	@include overlaySetting;
