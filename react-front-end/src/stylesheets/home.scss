@@ -41,19 +41,21 @@
 .btn-con {
   opacity: .85;
   margin: 16px;
-  width: 180px;
-	padding: 10px;
+  width: 220px;
+	padding: 15px;
 	background-color: #499fa4;
-	color: #13292a;
+	color: black;
 	border: #499fa4 solid 1px;
 	border-radius: 6px;
 	-webkit-box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
 	box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
-	font-size: 1rem;
+	font-size: 1.5rem;
 }
 
 .btn-con:hover {
-  opacity: 1;
+	opacity: 1;
+	font-weight: bold;
+	cursor: pointer;
 } 
 .overlay {
 	@include overlaySetting;
