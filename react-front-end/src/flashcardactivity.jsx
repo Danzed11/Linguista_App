@@ -23,16 +23,13 @@ class FlashcardActivity extends Component {
 		axios
 			.get('/words/data') // You can simply make your requests to "/api/whatever you want"
 			.then(response => {
+					console.log(response.data)
 				this.setState({
-					cardlist: response.data,
+					flashcardInstance: new flashcard(response.data),
 				});
 			})
-			.then(response => {
-				this.setState({
-					flashcardInstance: new flashcard(this.state.cardlist),
-				});
-			});
 	};
+
 	componentDidMount() {
 		this.fetchData();
 	}
@@ -54,6 +51,7 @@ class FlashcardActivity extends Component {
 		let targetCard = this.state.displayCard
 		if (targetCard.interval < 3) {
 			targetCard.interval++
+			this.state.flashcardInstance.updateInterval(targetCard.id, targetCard.interval)
 			axios({
           method: 'put',
           url: '/studylist',
@@ -68,8 +66,9 @@ class FlashcardActivity extends Component {
 
 	monderateAnswer = () => {
 		let targetCard = this.state.displayCard
-		if (targetCard.interval === 3) targetCard.interval--
-		if (targetCard.interval < 3) targetCard.interval++
+		if (targetCard.interval === 3) {targetCard.interval--}
+		else {targetCard.interval++}
+		this.state.flashcardInstance.updateInterval(targetCard.id, targetCard.interval)
 		axios({
           method: 'put',
           url: '/studylist',
@@ -84,6 +83,7 @@ class FlashcardActivity extends Component {
 		let targetCard = this.state.displayCard
 		if (targetCard.interval !== 1) {
 			targetCard.interval = 1;
+			this.state.flashcardInstance.updateInterval(targetCard.id, targetCard.interval)
 			axios({
           method: 'put',
           url: '/studylist',
