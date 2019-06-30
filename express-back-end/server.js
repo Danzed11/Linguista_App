@@ -45,6 +45,15 @@ App.post('/studylist', (req, res) => {
     .catch(err => {return err})
 });
 
+App.put('/studylist', (req, res) => {
+  let data = JSON.parse(Object.keys(req.body)).targetCard
+  console.log(data)
+  knex('studylist')
+    .where({ id: data.id })
+    .update({ interval: data.interval })
+    .asCallback(x => res.status(204).send())
+})
+
 App.post('/delete-word', (req, res) => {
   let request = Object.keys(req.body)
   let data = JSON.parse(request[0])

@@ -50,6 +50,52 @@ class FlashcardActivity extends Component {
 		});
 	};
 
+	easyAnswer = () => {
+		let targetCard = this.state.displayCard
+		if (targetCard.interval < 3) {
+			targetCard.interval++
+			axios({
+          method: 'put',
+          url: '/studylist',
+          data: {targetCard},
+          headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+				.then(res => this.newCard())
+				.catch(err => {return err})
+		}
+		else {this.newCard()}
+	};
+
+	monderateAnswer = () => {
+		let targetCard = this.state.displayCard
+		if (targetCard.interval === 3) targetCard.interval--
+		if (targetCard.interval < 3) targetCard.interval++
+		axios({
+          method: 'put',
+          url: '/studylist',
+          data: {targetCard},
+          headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+			.then(res => this.newCard())
+			.catch(err => {return err})
+	};
+
+	hardAnswer = () => {
+		let targetCard = this.state.displayCard
+		if (targetCard.interval !== 1) {
+			targetCard.interval = 1;
+			axios({
+          method: 'put',
+          url: '/studylist',
+          data: {targetCard},
+          headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+        })
+				.then(res => this.newCard())
+				.catch(err => {return err})
+		} else {this.newCard()}
+
+	};
+
 	displayAnswer = () => {
 		this.setState({ showAnswer: true });
 	};
@@ -89,9 +135,9 @@ class FlashcardActivity extends Component {
 							<h2>{this.state.displayCard.foreign_word}</h2>
 							<hr />
 							<h2>{this.state.displayCard.english_word}</h2>
-							<button onClick={this.newCard}>Couldn't remember</button>
-							<button onClick={this.newCard}>Barely Got it</button>
-							<button onClick={this.newCard}>Easy to answer</button>
+							<button onClick={this.hardAnswer}>Couldn't remember</button>
+							<button onClick={this.monderateAnswer}>Barely Got it</button>
+							<button onClick={this.easyAnswer}>Easy to answer</button>
 						</div>
 					</div>
 				</div>

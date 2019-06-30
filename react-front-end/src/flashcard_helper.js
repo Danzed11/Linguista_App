@@ -61,8 +61,6 @@ class Flashcards {
     }
 
     cardFromPool = cardFromPool[Math.floor(Math.random()*cardFromPool.length)];
-    console.log(`Card ${this.roundNumber + 1}`)
-    console.log(cardFromPool);
     this.roundNumber++
     cardFromPool.round = this.roundNumber
     return cardFromPool
