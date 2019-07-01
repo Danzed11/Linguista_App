@@ -93,17 +93,18 @@ class FlashcardActivity extends Component {
 							<h2>{this.state.displayCard.foreign_word}</h2>
 							<hr />
 							<h2>{this.state.displayCard.english_word}</h2>
-							<div className="answer-btns">
-								<button id="hard" onClick={this.newCard}>
-									Couldn't remember
-								</button>
-								<button id="medium" onClick={this.newCard}>
-									Barely Got it
-								</button>
-								<button id="easy" onClick={this.newCard}>
-									Easy to answer
-								</button>
-							</div>
+						</div>
+
+						<div className="answer-btns">
+							<button id="hard" onClick={this.newCard}>
+								Couldn't remember
+							</button>
+							<button id="medium" onClick={this.newCard}>
+								Barely Got it
+							</button>
+							<button id="easy" onClick={this.newCard}>
+								Easy to answer
+							</button>
 						</div>
 					</div>
 				</div>

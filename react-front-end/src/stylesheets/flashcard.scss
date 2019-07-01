@@ -37,6 +37,7 @@
 	text-align: center;
 	background: #499fa487;
 	top: 0;
+	flex-direction: column;
 }
 .content {
 	display: flex;
@@ -85,6 +86,8 @@
 .answer-btns {
 	position: relative;
 	display: inline;
+	top: 30px;
+	padding: 20px;
 }
 #answer-btn {
 	border-radius: 12px;
@@ -93,15 +96,31 @@
 #hard {
 	background-color: red;
 	border-radius: 12px;
-	padding: 12px;
+	padding: 12px 6px;
+	width: 88px;
+	border: $navCol solid 1.3px;
+	margin-right: 5px;
 }
 #medium {
 	background-color: yellow;
 	border-radius: 12px;
-	padding: 12px;
+	padding: 12px 8px;
+	width: 88px;
+	border: $navCol solid 1.3px;
+	margin-right: 5px;
 }
 #easy {
-	background-color: green;
+	background-color: #16b016;
 	border-radius: 12px;
-	padding: 12px;
+	padding: 12px 6px;
+	width: 88px;
+	// border: $navCol solid 1.3px;
+}
+
+#easy:hover,
+#medium:hover,
+#hard:hover {
+	box-shadow: -1px 2px 20px 6px #b5dfd6;
+	border: none;
+	font-weight: bold;
 }

@@ -60,6 +60,10 @@
   text-align: center;
   background: #499fa487;
   top: 0;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
 .content {
@@ -127,6 +131,8 @@
 .answer-btns {
   position: relative;
   display: inline;
+  top: 30px;
+  padding: 20px;
 }
 
 #answer-btn {
@@ -137,18 +143,34 @@
 #hard {
   background-color: red;
   border-radius: 12px;
-  padding: 12px;
+  padding: 12px 6px;
+  width: 88px;
+  border: #13292a solid 1.3px;
+  margin-right: 5px;
 }
 
 #medium {
   background-color: yellow;
   border-radius: 12px;
-  padding: 12px;
+  padding: 12px 8px;
+  width: 88px;
+  border: #13292a solid 1.3px;
+  margin-right: 5px;
 }
 
 #easy {
-  background-color: green;
+  background-color: #16b016;
   border-radius: 12px;
-  padding: 12px;
+  padding: 12px 6px;
+  width: 88px;
+}
+
+#easy:hover,
+#medium:hover,
+#hard:hover {
+  -webkit-box-shadow: -1px 2px 20px 6px #b5dfd6;
+          box-shadow: -1px 2px 20px 6px #b5dfd6;
+  border: none;
+  font-weight: bold;
 }
 /*# sourceMappingURL=flashcard.css.map */
