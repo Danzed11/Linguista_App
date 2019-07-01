@@ -61,7 +61,9 @@ class FlashcardActivity extends Component {
 					<div className="game-container">
 						<div className="content">
 							<h2> Start Studying </h2>
-							<button onClick={this.startUp}>Begin</button>
+							<button id="answer-btn" onClick={this.startUp}>
+								Begin
+							</button>
 						</div>
 					</div>
 				</div>
@@ -75,7 +77,9 @@ class FlashcardActivity extends Component {
 							<h1>Card: {this.state.displayCard.round}</h1>
 							<h2>{this.state.displayCard.foreign_word}</h2>
 							<hr />
-							<button onClick={this.displayAnswer}>Show answer!</button>
+							<button id="answer-btn" onClick={this.displayAnswer}>
+								Show answer!
+							</button>
 						</div>
 					</div>
 				</div>
@@ -89,9 +93,17 @@ class FlashcardActivity extends Component {
 							<h2>{this.state.displayCard.foreign_word}</h2>
 							<hr />
 							<h2>{this.state.displayCard.english_word}</h2>
-							<button onClick={this.newCard}>Couldn't remember</button>
-							<button onClick={this.newCard}>Barely Got it</button>
-							<button onClick={this.newCard}>Easy to answer</button>
+							<div className="answer-btns">
+								<button id="hard" onClick={this.newCard}>
+									Couldn't remember
+								</button>
+								<button id="medium" onClick={this.newCard}>
+									Barely Got it
+								</button>
+								<button id="easy" onClick={this.newCard}>
+									Easy to answer
+								</button>
+							</div>
 						</div>
 					</div>
 				</div>

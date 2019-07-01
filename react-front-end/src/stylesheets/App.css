@@ -24,6 +24,7 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-flow: column nowrap;
           flex-flow: column nowrap;
+  overflow: hidden;
 }
 
 #overlay {

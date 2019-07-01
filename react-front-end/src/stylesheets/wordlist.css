@@ -35,6 +35,7 @@
   width: 100%;
   position: relative;
   overflow: auto;
+  top: 0;
 }
 
 .wordlistContainer-dashboard .content-container h1 {
@@ -72,6 +73,9 @@
   position: relative;
   height: 50vh;
   top: 0;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -79,9 +83,6 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   z-index: 3;
   height: 100vh;
 }

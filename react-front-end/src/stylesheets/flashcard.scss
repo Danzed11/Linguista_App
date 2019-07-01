@@ -20,7 +20,12 @@
 }
 
 .flashcard-game {
-	@include page-container;
+	display: flex;
+	position: relative;
+	justify-content: center;
+
+	z-index: 3;
+	height: 100vh;
 }
 .game-container {
 	@include dash-container;
@@ -29,11 +34,18 @@
 	overflow: hidden;
 	z-index: 4;
 	position: relative;
+	text-align: center;
 	background: #499fa487;
+	top: 0;
 }
 .content {
 	display: flex;
 	flex-direction: column;
+	h1 {
+		font-family: cursive;
+		text-decoration: underline;
+		font-weight: bold;
+	}
 }
 .overlay {
 	@include overlaySetting;
@@ -47,7 +59,6 @@
 }
 .tabs {
 	position: absolute;
-	display: flex;
 	top: 70px;
 	width: 100vw;
 }
@@ -56,11 +67,41 @@
 	list-style: none;
 	margin-bottom: -1px;
 	padding: 0.5rem 0.75rem;
-	border-bottom: 1px solid $navCol;
+	background-color: $secondaryCol;
+	border-radius: 12px 12px 0 0;
+	border-bottom: $navCol solid 1px;
 }
 .tab-list-active {
 	background-color: $primaryCol;
-	border: solid $navCol;
+	border: solid $navCol 1px;
 	border-radius: 12px 12px 0 0;
 	border-width: 1px 1px 0 1px;
+	border-bottom: none;
+}
+.tab-content {
+	width: 100vw;
+	align-content: center;
+}
+.answer-btns {
+	position: relative;
+	display: inline;
+}
+#answer-btn {
+	border-radius: 12px;
+	padding: 12px;
+}
+#hard {
+	background-color: red;
+	border-radius: 12px;
+	padding: 12px;
+}
+#medium {
+	background-color: yellow;
+	border-radius: 12px;
+	padding: 12px;
+}
+#easy {
+	background-color: green;
+	border-radius: 12px;
+	padding: 12px;
 }
