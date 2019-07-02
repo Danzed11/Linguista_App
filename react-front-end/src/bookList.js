@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Nav from './components/nav.js';
 import axios from 'axios';
-import { BrowserRouter as Link } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import './stylesheets/booklist.css';
 import UploadForm from './components/epubUploadForm.js';
 
@@ -31,16 +31,18 @@ class Booklist extends Component {
 						<div className="library-page">
 							<div className="content">
 								<h1>Your Library</h1>
-								{this.state.books.map(book => {
-									let url = `/reader/${book.id}/3`;
-									return (
 										<ul className="booklist">
+								{this.state.books.map(book => {
+									let url = `/reader/${book.id}/3`
+									return (
 											<li>
-												<Link to={url}>{book.title}</Link>
+											<Link to={url}>
+												{book.title}
+											</Link>
 											</li>
-										</ul>
 									);
 								})}
+										</ul>
 							</div>
 
 							<div className="upload">
