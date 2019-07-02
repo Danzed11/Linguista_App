@@ -5,11 +5,16 @@ import axios from 'axios';
 import './stylesheets/App.css';
 
 import Home from './components/home.js';
+
+// import Nav from './components/nav.js';
 import Dashboard from './dashboard.js';
 import Booklist from './bookList.js';
 import Wordlist from './wordList.js';
 import Study from './study.js';
 import Reader from './reader.js';
+
+// import Dropzone from './components/dropZone.js';
+// import Flashcard from './components/flashcard.js';
 
 class App extends Component {
 	constructor(props) {
