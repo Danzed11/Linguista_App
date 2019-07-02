@@ -11,11 +11,11 @@ class Study extends Component {
 			<div className="App">
 				<Nav />
 				<Tabs className="tabs">
-					<div label="Words">
-						<Wordlist />
-					</div>
 					<div label="Flashcards">
 						<FlashcardActivity />
+					</div>
+					<div label="Words">
+						<Wordlist />
 					</div>
 				</Tabs>
 			</div>

@@ -126,7 +126,7 @@ class FlashcardActivity extends Component {
 				<div className="flashcard-game">
 					<div className="game-container">
 						<div className="content">
-							<h2> Start Studying </h2>
+							<h1> Start Studying </h1>
 							<button id="answer-btn" onClick={this.startUp}>
 								Begin
 							</button>
@@ -144,7 +144,7 @@ class FlashcardActivity extends Component {
 							<h2>{this.state.displayCard.foreign_word}</h2>
 							<hr />
 							<button id="answer-btn" onClick={this.displayAnswer}>
-								Show answer!
+								Show Answer
 							</button>
 						</div>
 					</div>
@@ -161,13 +161,13 @@ class FlashcardActivity extends Component {
 							<h2>{this.state.displayCard.english_word}</h2>
 							<div className="answer-btns">
 								<button id="hard" onClick={this.hardAnswer}>
-									Couldn't remember
+									Couldn't Remember
 								</button>
 								<button id="medium" onClick={this.monderateAnswer}>
-									Barely Got it
+									Barely Got It
 								</button>
 								<button id="easy" onClick={this.easyAnswer}>
-									Easy to answer
+									Easy to Answer
 								</button>
 							</div>
 						</div>

@@ -82,6 +82,10 @@
   font-weight: bold;
 }
 
+.content h2 {
+  text-transform: capitalize;
+}
+
 .overlay {
   opacity: 0.5;
   position: absolute;
@@ -138,14 +142,22 @@
 #answer-btn {
   border-radius: 12px;
   padding: 12px;
+  background-color: #91cabe;
+  border: #13292a solid 1.3px;
+  -webkit-box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
+          box-shadow: 14px 12px 19px -7px rgba(118, 98, 152, 0.51);
+}
+
+#answer-btn:hover {
+  font-weight: bold;
+  background-color: #b5dfd6;
 }
 
 #hard {
   background-color: red;
   border-radius: 12px;
   padding: 12px 6px;
-  width: 88px;
-  border: #13292a solid 1.3px;
+  width: 90px;
   margin-right: 5px;
 }
 
@@ -153,8 +165,7 @@
   background-color: yellow;
   border-radius: 12px;
   padding: 12px 8px;
-  width: 88px;
-  border: #13292a solid 1.3px;
+  width: 90px;
   margin-right: 5px;
 }
 
@@ -162,7 +173,7 @@
   background-color: #16b016;
   border-radius: 12px;
   padding: 12px 6px;
-  width: 88px;
+  width: 90px;
 }
 
 #easy:hover,

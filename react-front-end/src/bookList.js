@@ -32,14 +32,12 @@ class Booklist extends Component {
 							<div className="content">
 								<h1>Your Library</h1>
 								<ul className="booklist">
-									{this.state.books.map(book => {
-										let url = `/reader/${book.id}/3`;
-										return (
-											<li>
-												<Link to={url}>{book.title}</Link>
-											</li>
-										);
-									})}
+									<li>
+										{this.state.books.map(book => {
+											let url = `/reader/${book.id}/3`;
+											return <Link to={url}>{book.title}</Link>;
+										})}
+									</li>
 								</ul>
 							</div>
 

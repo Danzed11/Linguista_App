@@ -47,6 +47,9 @@
 		text-decoration: underline;
 		font-weight: bold;
 	}
+	h2 {
+		text-transform: capitalize;
+	}
 }
 .overlay {
 	@include overlaySetting;
@@ -92,28 +95,35 @@
 #answer-btn {
 	border-radius: 12px;
 	padding: 12px;
+	background-color: $tertiaryCol;
+	border: $navCol solid 1.3px;
+	box-shadow: $shadow;
+}
+#answer-btn:hover {
+	font-weight: bold;
+	background-color: $primaryCol;
 }
 #hard {
 	background-color: red;
 	border-radius: 12px;
 	padding: 12px 6px;
-	width: 88px;
-	border: $navCol solid 1.3px;
+	width: 90px;
+	// border: $navCol solid 1.3px;
 	margin-right: 5px;
 }
 #medium {
 	background-color: yellow;
 	border-radius: 12px;
 	padding: 12px 8px;
-	width: 88px;
-	border: $navCol solid 1.3px;
+	width: 90px;
+	// border: $navCol solid 1.3px;
 	margin-right: 5px;
 }
 #easy {
 	background-color: #16b016;
 	border-radius: 12px;
 	padding: 12px 6px;
-	width: 88px;
+	width: 90px;
 	// border: $navCol solid 1.3px;
 }
 
