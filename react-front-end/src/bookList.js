@@ -31,16 +31,16 @@ class Booklist extends Component {
 						<div className="library-page">
 							<div className="content">
 								<h1>Your Library</h1>
-								{this.state.books.map(book => {
-									let url = `/reader/${book.id}/3`;
-									return (
-										<ul className="booklist">
+								<ul className="booklist">
+									{this.state.books.map(book => {
+										let url = `/reader/${book.id}/3`;
+										return (
 											<li>
 												<Link to={url}>{book.title}</Link>
 											</li>
-										</ul>
-									);
-								})}
+										);
+									})}
+								</ul>
 							</div>
 
 							<div className="upload">
