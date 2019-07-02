@@ -1,5 +1,9 @@
 @import '_variables';
 
+body {
+  overflow-x:hidden;
+}
+
 .chapter-div {
   white-space: pre-line;
   overflow: auto;
@@ -93,7 +97,7 @@ body {
 }
 
 .prev-next-leftarrow {
- background-color: $secondaryCol;
+ background-color: red;
  transform:  translateY(-50%);
  position: fixed;
  top: calc(50% + 35px);
