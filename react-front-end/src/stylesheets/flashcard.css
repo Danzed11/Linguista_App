@@ -141,25 +141,23 @@
 }
 
 #hard {
-  background-color: red;
+  background-color: #b81f14;
   border-radius: 12px;
   padding: 12px 6px;
   width: 88px;
-  border: #13292a solid 1.3px;
   margin-right: 5px;
 }
 
 #medium {
-  background-color: yellow;
+  background-color: #bdbd10;
   border-radius: 12px;
   padding: 12px 8px;
   width: 88px;
-  border: #13292a solid 1.3px;
   margin-right: 5px;
 }
 
 #easy {
-  background-color: #16b016;
+  background-color: #1e961e;
   border-radius: 12px;
   padding: 12px 6px;
   width: 88px;

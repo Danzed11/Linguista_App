@@ -96,4 +96,10 @@ ul.booklist {
 a {
   color: black;
 }
+
+li {
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
 /*# sourceMappingURL=booklist.css.map */
