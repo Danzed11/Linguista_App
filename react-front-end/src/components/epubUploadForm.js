@@ -10,8 +10,8 @@ class UploadForm extends Component {
         method    =  "post"
     >
     <lable>Book Title</lable><br/>
-    <input type="text" name="title" /><br/>
-    <input type="file" name="uploadedEpub" />
+    <input type="text" name="title" required /><br/>
+    <input type="file" name="uploadedEpub" required />
     <input type="submit" value="Upload ePub" name="submit"/>
     </form>
     );

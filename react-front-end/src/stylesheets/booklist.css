@@ -85,4 +85,15 @@
   font-weight: bold;
   text-decoration: underline;
 }
+
+ul.booklist {
+  position: relative;
+  top: 15px;
+  -webkit-padding-start: 0;
+          padding-inline-start: 0;
+}
+
+a {
+  color: black;
+}
 /*# sourceMappingURL=booklist.css.map */
