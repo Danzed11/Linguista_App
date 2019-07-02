@@ -23,16 +23,13 @@ class FlashcardActivity extends Component {
 		axios
 			.get('/words/data') // You can simply make your requests to "/api/whatever you want"
 			.then(response => {
+				console.log(response.data);
 				this.setState({
-					cardlist: response.data,
-				});
-			})
-			.then(response => {
-				this.setState({
-					flashcardInstance: new flashcard(this.state.cardlist),
+					flashcardInstance: new flashcard(response.data),
 				});
 			});
 	};
+
 	componentDidMount() {
 		this.fetchData();
 	}
@@ -48,6 +45,75 @@ class FlashcardActivity extends Component {
 			displayCard: this.state.flashcardInstance.card(),
 			showAnswer: false,
 		});
+	};
+
+	easyAnswer = () => {
+		let targetCard = this.state.displayCard;
+		if (targetCard.interval < 3) {
+			targetCard.interval++;
+			this.state.flashcardInstance.updateInterval(
+				targetCard.id,
+				targetCard.interval,
+			);
+			axios({
+				method: 'put',
+				url: '/studylist',
+				data: { targetCard },
+				headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+			})
+				.then(res => this.newCard())
+				.catch(err => {
+					return err;
+				});
+		} else {
+			this.newCard();
+		}
+	};
+
+	monderateAnswer = () => {
+		let targetCard = this.state.displayCard;
+		if (targetCard.interval === 3) {
+			targetCard.interval--;
+		} else {
+			targetCard.interval++;
+		}
+		this.state.flashcardInstance.updateInterval(
+			targetCard.id,
+			targetCard.interval,
+		);
+		axios({
+			method: 'put',
+			url: '/studylist',
+			data: { targetCard },
+			headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+		})
+			.then(res => this.newCard())
+			.catch(err => {
+				return err;
+			});
+	};
+
+	hardAnswer = () => {
+		let targetCard = this.state.displayCard;
+		if (targetCard.interval !== 1) {
+			targetCard.interval = 1;
+			this.state.flashcardInstance.updateInterval(
+				targetCard.id,
+				targetCard.interval,
+			);
+			axios({
+				method: 'put',
+				url: '/studylist',
+				data: { targetCard },
+				headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+			})
+				.then(res => this.newCard())
+				.catch(err => {
+					return err;
+				});
+		} else {
+			this.newCard();
+		}
 	};
 
 	displayAnswer = () => {
@@ -94,13 +160,13 @@ class FlashcardActivity extends Component {
 							<hr />
 							<h2>{this.state.displayCard.english_word}</h2>
 							<div className="answer-btns">
-								<button id="hard" onClick={this.newCard}>
+								<button id="hard" onClick={this.hardAnswer}>
 									Couldn't remember
 								</button>
-								<button id="medium" onClick={this.newCard}>
+								<button id="medium" onClick={this.monderateAnswer}>
 									Barely Got it
 								</button>
-								<button id="easy" onClick={this.newCard}>
+								<button id="easy" onClick={this.easyAnswer}>
 									Easy to answer
 								</button>
 							</div>
