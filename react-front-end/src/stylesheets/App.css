@@ -65,18 +65,21 @@ body {
   background: #91cabe;
   border-radius: 40px;
   border-right: #13292a solid 1px;
-  -webkit-box-shadow: inset -6px 0px 7px 1px #13292a80;
-          box-shadow: inset -6px 0px 7px 1px #13292a80;
+  -webkit-box-shadow: inset -3px 0px 6px -2px #13292a;
+          box-shadow: inset -3px 0px 6px -2px #13292a;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: #b5dfd6;
   border-radius: 40px;
+  -webkit-box-shadow: inset -6px 0px 10px 0px #499fa4;
+          box-shadow: inset -6px 0px 10px 0px #499fa4;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: #499fa4;
+  -webkit-box-shadow: inset -6px 0px 12px 3px #499fa4;
+          box-shadow: inset -6px 0px 12px 3px #499fa4;
 }
 /*# sourceMappingURL=App.css.map */
