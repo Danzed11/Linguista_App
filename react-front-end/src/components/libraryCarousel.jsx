@@ -8,7 +8,7 @@ class LibraryCarousel extends Component {
 		return (
 			<div className="carousel">
 				<Carousel arrows infinite>
-					<div>
+					<div className="bookCover">
 						<h1>Harry Potter et la Coupe De Feu</h1>
 						<img
 							src="https://images-na.ssl-images-amazon.com/images/I/51Pab2aMLHL.jpg"
@@ -16,7 +16,7 @@ class LibraryCarousel extends Component {
 							alt="Harry Potter"
 						/>
 					</div>
-					<div>
+					<div className="bookCover">
 						<h1>Coraline</h1>
 						<img
 							src="https://images-na.ssl-images-amazon.com/images/I/41eXaoJCaUL.jpg"
@@ -24,7 +24,7 @@ class LibraryCarousel extends Component {
 							alt="Coraline"
 						/>
 					</div>
-					<div>
+					<div className="bookCover">
 						<h1>Game of Thrones</h1>
 						<img
 							src="https://images-na.ssl-images-amazon.com/images/I/41PO1V8EHcL.jpg"
@@ -32,7 +32,7 @@ class LibraryCarousel extends Component {
 							alt="Game Of Throness"
 						/>
 					</div>
-					<div>
+					<div className="bookCover">
 						<h1>Moi, Simon, 16ans, Homo Sapiens</h1>
 						<img
 							src="https://images-na.ssl-images-amazon.com/images/I/813lU7WPKvL.jpg"
