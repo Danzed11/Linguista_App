@@ -19,6 +19,9 @@
 	align-items: center;
 	justify-content: center;
 	flex-direction: column;
+	h1 {
+		font-family: cursive;
+	}
 }
 .overlay {
 	@include overlaySetting;
@@ -30,7 +33,7 @@
 }
 .upload {
 	text-align: start;
-	margin-left: 20%;
+	margin-left: 16%;
 	input {
 		border-radius: 8px;
 	}

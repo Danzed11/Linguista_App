@@ -43,6 +43,10 @@
           flex-direction: column;
 }
 
+.container h1 {
+  font-family: cursive;
+}
+
 .overlay {
   opacity: 0.5;
   position: absolute;
@@ -72,7 +76,7 @@
 
 .upload {
   text-align: start;
-  margin-left: 20%;
+  margin-left: 16%;
 }
 
 .upload input {
