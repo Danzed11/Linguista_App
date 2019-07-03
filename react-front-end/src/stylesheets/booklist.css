@@ -68,6 +68,10 @@
   padding-left: 0;
 }
 
+.library-page .content .booklist .hardCoded {
+  text-decoration: underline;
+}
+
 .library-page .content h1 {
   position: absolute;
   z-index: 9;
