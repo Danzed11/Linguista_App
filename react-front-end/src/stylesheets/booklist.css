@@ -86,14 +86,18 @@
   text-decoration: underline;
 }
 
-ul.booklist {
+.booklist {
   position: relative;
   top: 15px;
   -webkit-padding-start: 0;
           padding-inline-start: 0;
 }
 
-a {
+.booklist li {
+  margin: 3px o;
+}
+
+.booklist a {
   color: black;
 }
 /*# sourceMappingURL=booklist.css.map */

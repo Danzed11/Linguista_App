@@ -58,12 +58,14 @@
 	}
 }
 
-ul.booklist {
+.booklist {
 	position: relative;
 	top: 15px;
-	padding-inline-start: 0; 
-}
-
-a {
-	color: black;
+	padding-inline-start: 0;
+	li {
+		margin: 3px o;
+	}
+	a {
+		color: black;
+	}
 }
