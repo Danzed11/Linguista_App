@@ -38,7 +38,7 @@
 		border-bottom: $navCol solid 1.5px;
 		.booklist {
 			list-style: none;
-			margin-top: 85px;
+			margin-top: 75px;
 			padding-left: 0;
 		}
 		h1 {
@@ -56,14 +56,8 @@
 		font-weight: bold;
 		text-decoration: underline;
 	}
-}
-
-.booklist {
-	position: relative;
-	top: 15px;
-	padding-inline-start: 0;
 	li {
-		margin: 3px o;
+		margin: 10px;
 	}
 	a {
 		color: black;

@@ -64,7 +64,7 @@
 
 .library-page .content .booklist {
   list-style: none;
-  margin-top: 85px;
+  margin-top: 75px;
   padding-left: 0;
 }
 
@@ -86,18 +86,11 @@
   text-decoration: underline;
 }
 
-.booklist {
-  position: relative;
-  top: 15px;
-  -webkit-padding-start: 0;
-          padding-inline-start: 0;
+.library-page li {
+  margin: 10px;
 }
 
-.booklist li {
-  margin: 3px o;
-}
-
-.booklist a {
+.library-page a {
   color: black;
 }
 /*# sourceMappingURL=booklist.css.map */
